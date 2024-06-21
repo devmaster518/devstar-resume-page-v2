@@ -1,4 +1,5 @@
 'use client';
+
 import { ThemeProvider } from 'next-themes';
 import AnimatedCursor from 'react-animated-cursor';
 import { useEffect, useState } from 'react';

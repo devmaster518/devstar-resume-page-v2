@@ -1,12 +1,13 @@
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { SiLeetcode } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
 
 export default function LandingPage() {
-	const line1 = 'Hi, I am a passionate computer science student from India🇮🇳 🇮🇳';
-	const line2 = 'I like to learn new things and build stuff.';
+	const line1 =
+		'Experienced in the dynamic world of NodeJS, Python, Go, and Rust, I am a Senior Developer ready to bring your projects to life.';
+	const line2 =
+		'With a passion for innovation and a knack for problem-solving, I am thriving in the fast-paced world of competition with you.';
 
 	const [mounted, setMounted] = useState(false);
 
@@ -14,7 +15,12 @@ export default function LandingPage() {
 		setMounted(true);
 	}, []);
 
-	const titles = ['Computer Science Student', 'Full Stack Developer', 'Competitive Programmer', 'Caffeinated Coder'];
+	const titles = [
+		'Senior NodeJS Engineer',
+		'Senior Python Engineer',
+		'Enthusiastic GoLang Developer',
+		'Smart Rust Developer',
+	];
 	const [titleIndex, setTitleIndex] = useState(0);
 
 	useEffect(() => {
@@ -28,7 +34,7 @@ export default function LandingPage() {
 		<div className="min-h-[100dvh] w-full md:flex md:items-center md:justify-center">
 			<div className="px-10 pt-10 text-center">
 				<h1 className="py-2 text-3xl font-medium text-cyan-700 dark:text-cyan-600 sm:text-4xl md:text-5xl">
-					Chirag Aggarwal
+					Xing Wang (王星)
 				</h1>
 
 				{mounted ? (
@@ -98,17 +104,17 @@ export default function LandingPage() {
 				)}
 				<div className="flex justify-center gap-16 py-3 text-5xl text-gray-600">
 					<a
-						href="https://github.com/ChiragAgg5k"
+						href="https://github.com/devmaster518"
 						target="_blank"
 						aria-label="Github"
 						rel="noreferrer"
 						className="group hover:cursor-pointer hover:text-black dark:hover:text-white"
 					>
 						<AiFillGithub />
-						<p className="invisible text-xs group-hover:visible">Github</p>
+						<p className="invisible text-xs group-hover:visible">GitHub</p>
 					</a>
 					<a
-						href="https://www.linkedin.com/in/chiragagg5k/"
+						href="https://www.linkedin.com/in/wang-xing-667365315/"
 						target="_blank"
 						rel="noreferrer"
 						aria-label="LinkedIn"
@@ -116,16 +122,6 @@ export default function LandingPage() {
 					>
 						<AiFillLinkedin />
 						<p className=" invisible  text-xs group-hover:visible">LinkedIn</p>
-					</a>
-					<a
-						href="https://leetcode.com/ChiragAgg5k/"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="Leetcode"
-						className="group hover:cursor-pointer hover:text-yellow-600"
-					>
-						<SiLeetcode />
-						<p className="invisible text-xs group-hover:visible">Leetcode</p>
 					</a>
 				</div>
 			</div>

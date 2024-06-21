@@ -63,31 +63,31 @@ export default function ContactMe() {
 				<span className="flex items-center pb-4">
 					<AiOutlineMail className="mr-2" />
 					<Link
-						href="mailto: chiragaggarwal5k@gmail.com"
+						href="mailto: xwang.star214@gmail.com"
 						className="group transition duration-300"
 						rel="noreferrer"
 						target="_blank"
 					>
-						chiragaggarwal5k@gmail.com
+						xwang.star214@gmail.com
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
 				<span className="flex items-center pb-4">
 					<AiOutlineWhatsApp className="mr-2" />
 					<Link
-						href="https://wa.me/919667658415"
+						href="https://wa.me/447940728737"
 						rel="noreferrer"
 						className="group transition duration-300"
 						target="_blank"
 					>
-						+91 96676 58415
+						+447940728737
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
 				<span className="flex items-center">
 					<AiOutlineLink className="mr-2" />
 					<Link
-						href="https://chirag-aggarwal-resume.tiiny.site/"
+						href="https://drive.google.com/file/d/1Gl3CSze59TEppEftz2T5_cecBRNQzm97/view?usp=drive_link"
 						rel="noreferrer"
 						className="group transition duration-300"
 						target="_blank"

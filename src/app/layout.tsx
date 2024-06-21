@@ -10,9 +10,9 @@ const geologica = Geologica({
 });
 
 export const metadata = {
-	title: 'Chirag Aggarwal',
+	title: 'Xing Wang | Senior Developer',
 	description:
-		"Showcasing the projects, skills, and achievements of Chirag Aggarwal, a talented computer science engineering student from India. Explore Chirag Aggarwal's expertise in programming, problem-solving, and technical development through this carefully curated portfolio.",
+		"Showcasing the projects, skills, and achievements of Xing Wang, a talented computer science engineering student from India. Explore Xing Wang's expertise in programming, problem-solving, and technical development through this carefully curated portfolio.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

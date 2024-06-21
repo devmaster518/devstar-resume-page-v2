@@ -49,7 +49,7 @@ export default function Projects() {
 			description: 'Desktop Application',
 			name: 'Asclepius',
 			demo_link: '#',
-			github_link: 'https://github.com/ChiragAgg5k/asclepius',
+			github_link: 'https://github.com/devmaster518/asclepius',
 			hover_gif_dark: '/project_gifs/dark/asclepius.gif',
 			hover_gif_light: '/project_gifs/light/asclepius.gif',
 		},
@@ -60,7 +60,7 @@ export default function Projects() {
 			description: 'Web Application',
 			name: 'Spot Clone',
 			demo_link: 'https://spot-clonee.netlify.app/',
-			github_link: 'https://github.com/ChiragAgg5k/spot-clone',
+			github_link: 'https://github.com/devmaster518/spot-clone',
 			hover_gif_dark: '/project_gifs/spot-clone.gif',
 			hover_gif_light: '/project_gifs/spot-clone.gif',
 		},
@@ -71,7 +71,7 @@ export default function Projects() {
 			description: 'Android Application',
 			name: 'BU News',
 			demo_link: '#',
-			github_link: 'https://github.com/ChiragAgg5k/bu-news-android',
+			github_link: 'https://github.com/devmaster518/bu-news-android',
 			hover_gif_dark: '/project_gifs/dark/bu-news-android.gif',
 			hover_gif_light: '/project_gifs/light/bu-news-android.gif',
 		},
@@ -82,7 +82,7 @@ export default function Projects() {
 			description: 'Web Application',
 			name: 'BU News',
 			demo_link: 'https://bu-news.vercel.app/',
-			github_link: 'https://github.com/ChiragAgg5k/bu-news-website',
+			github_link: 'https://github.com/devmaster518/bu-news-website',
 			hover_gif_dark: '/project_gifs/dark/bu-news.gif',
 			hover_gif_light: '/project_gifs/light/bu-news.gif',
 		},
@@ -93,7 +93,7 @@ export default function Projects() {
 			description: 'Web Application',
 			name: 'Weatherly',
 			demo_link: 'https://weatherrly.vercel.app/',
-			github_link: 'https://github.com/ChiragAgg5k/weatherly',
+			github_link: 'https://github.com/devmaster518/weatherly',
 			hover_gif_dark: '/project_gifs/dark/weatherly.gif',
 			hover_gif_light: '/project_gifs/light/weatherly.gif',
 		},
@@ -104,7 +104,7 @@ export default function Projects() {
 			description: 'Web Application',
 			name: 'Bug Squash',
 			demo_link: 'https://bug-squash.co',
-			github_link: 'https://github.com/ChiragAgg5k/bug-squash',
+			github_link: 'https://github.com/devmaster518/bug-squash',
 			hover_gif_dark: '/project_gifs/dark/bug-squash.gif',
 			hover_gif_light: '/project_gifs/light/bug-squash.gif',
 		},
@@ -147,9 +147,7 @@ export default function Projects() {
 										/>
 									</div>
 									<div className={`w-full`}>
-										<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">
-											{project.description}
-										</p>
+										<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">{project.description}</p>
 										<p className="my-1 text-xl font-medium">{project.name}</p>
 										<div className="flex justify-between">
 											<Link
@@ -170,12 +168,7 @@ export default function Projects() {
 												{project.demo_link === '#' ? '' : 'Visit'}
 												<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 											</Link>
-											<Link
-												href={project.github_link}
-												rel="noreferrer"
-												title="Github Link"
-												target="_blank"
-											>
+											<Link href={project.github_link} rel="noreferrer" title="Github Link" target="_blank">
 												<AiFillGithub className="inline-block text-4xl text-black transition delay-75 ease-in-out hover:scale-125 dark:text-white" />
 											</Link>
 										</div>

@@ -11,68 +11,68 @@ export default function Education() {
 					Education
 				</h3>
 				<div className="mx-0 grid grid-cols-1 sm:grid-cols-2 md:mx-5 lg:grid-cols-4">
-					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500  dark:border-gray-800 dark:text-white dark:hover:border-cyan-700">
-						<Fade left cascade>
+					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500 dark:border-gray-800 dark:text-white dark:hover:border-cyan-700">
+						<Fade left>
 							<div>
-								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2020</p>
-								<p className="my-1 text-xl font-medium">Class X</p>
-								<p className="my-1 text-sm font-medium">CBSE</p>
-								<p className="text-sm">Grade: 91.2% </p>
+								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2021</p>
+								<p className="my-1 text-xl font-medium">Web3 Solidity Bootcamp</p>
+								<p className="my-1 text-sm font-medium">Online BootCamp at Metana</p>
+								{/* <p className="text-sm">Grade: 89.5% </p> */}
 							</div>
 							<div className="block">
 								<Image
-									src="/bps_logo.png"
-									alt="BPS Logo"
+									src="/solidity-bootcamp.png"
+									alt="Metana Web3 Solidity Bootcamp Logo"
 									width={100}
-									title="BPS Mayur Vihar Phase III"
 									height={100}
+									title="Web3 Solidity Bootcamp 2021"
 									onClick={() => {
-										window.open('https://www.bpsmv.edu.in/', '_blank');
+										window.open('https://metana.io/web3-0-bootcamp/', '_blank');
 									}}
 									className="hover:cursor-pointer"
 								/>
 							</div>
 						</Fade>
 					</div>
-					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500  dark:border-gray-800 dark:text-white dark:hover:border-cyan-700">
+					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500 dark:border-gray-800 dark:text-white dark:hover:border-cyan-700">
 						<Fade left>
 							<div>
-								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2020-2022</p>
-								<p className="my-1 text-xl font-medium">Class XII</p>
-								<p className="my-1 text-sm font-medium">Science</p>
-								<p className="text-sm">Grade: 89.5% </p>
+								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2018</p>
+								<p className="my-1 text-xl font-medium">The Complete NodeJs Development Bootcamp 2018</p>
+								<p className="my-1 text-sm font-medium">Online Coding BootCamp</p>
+								{/* <p className="text-sm">Grade: 89.5% </p> */}
 							</div>
 							<div className="block">
 								<Image
-									src="/bps_logo.png"
-									alt="BPS Logo"
+									src="/udemy.png"
+									alt="Udemy Bootcamp Logo"
 									width={100}
 									height={100}
-									title="BPS Mayur Vihar Phase III"
+									title="Udemy NodeJS Dev Bootcamp 2018"
 									onClick={() => {
-										window.open('https://www.bpsmv.edu.in/', '_blank');
+										window.open('https://www.udemy.com/course/the-complete-nodejs-development-bootcamp/', '_blank');
 									}}
 									className="hover:cursor-pointer"
 								/>
 							</div>
 						</Fade>
 					</div>
-					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500 dark:border-gray-800  dark:text-white dark:hover:border-cyan-700 sm:col-span-2">
+					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500 dark:border-gray-800 dark:text-white dark:hover:border-cyan-700 sm:col-span-2">
 						<Fade left>
 							<div>
-								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2022-2026</p>
-								<p className="my-1 font-medium sm:text-xl">B.Tech in Computer Science</p>
-								<p className="my-1 text-sm font-medium">Bennett University</p>
-								<p className="text-sm">CGPA: 9.66</p>
+								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2010-2015</p>
+								<p className="my-1 font-medium sm:text-xl">B.Science in Math & Computer Science</p>
+								<p className="my-1 text-sm font-medium">Dalian University of Technology</p>
+								{/* <p className="text-sm">CGPA: 9.66</p> */}
 							</div>
 							<Image
-								src="/bennett_logo.png"
-								alt="Bennett Logo"
+								src="/DLUT_logo.png"
+								alt="DLUT Logo"
 								width={100}
 								height={100}
-								title="Bennett University"
+								title="Dalian University of Technology (大连理工大学)"
 								onClick={() => {
-									window.open('https://www.bennett.edu.in/', '_blank');
+									window.open('https://en.dlut.edu.cn/', '_blank');
 								}}
 								className="object-contain hover:cursor-pointer"
 							/>

@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
-import { TbBrandCpp, TbBrandNextjs, TbBrandTypescript } from 'react-icons/tb';
+import { TbBrandCpp, TbBrandNextjs, TbBrandReact } from 'react-icons/tb';
 import { DiJava, DiMongodb, DiPostgresql, DiPython } from 'react-icons/di';
-import { SiDjango, SiExpress, SiFirebase, SiFlutter, SiMysql, SiSqlite } from 'react-icons/si';
-import { FaRust } from "react-icons/fa";
-import { BsAndroid2, BsGit } from 'react-icons/bs';
-import { BiLogoJavascript } from 'react-icons/bi';
+import {
+	SiDjango,
+	SiExpress,
+	SiFirebase,
+	SiMysql,
+	SiSolidity,
+	SiGin,
+	SiAlchemy,
+	SiRedis,
+	SiAmazonaws,
+	SiMicrosoftazure,
+} from 'react-icons/si';
+import { FaRust, FaHardHat } from 'react-icons/fa';
+import { BsGit } from 'react-icons/bs';
+import { BiLogoJavascript, BiLogoGoLang } from 'react-icons/bi';
 import { FcLinux } from 'react-icons/fc';
 import { FaDocker } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
@@ -20,46 +31,51 @@ interface Tool {
 const languageTools: Tool[] = [
 	{
 		index: 0,
+		name: 'NodeJS',
+		icon: <BiLogoJavascript className={'m-4 text-6xl text-yellow-500'} />,
+	},
+	{
+		index: 1,
 		name: 'Python',
 		icon: <DiPython className="m-4 text-6xl text-cyan-700" />,
 	},
 	{
-		index: 1,
+		index: 2,
 		name: 'C++',
 		icon: <TbBrandCpp className="m-4 text-6xl text-blue-600 " />,
 	},
 	{
-		index: 2,
+		index: 3,
 		name: 'Java',
 		icon: <DiJava className={'m-4 text-6xl text-orange-700'} />,
 	},
 	{
-		index: 3,
-		name: 'Javascript',
-		icon: <BiLogoJavascript className={'m-4 text-6xl text-yellow-500'} />,
-	},
-	{
 		index: 4,
-		name: 'TypeScript',
-		icon: <TbBrandTypescript className="m-4 text-6xl text-blue-600" />,
+		name: 'GoLang',
+		icon: <BiLogoGoLang className={'m-4 text-6xl text-blue-600'} />,
 	},
 	{
 		index: 5,
+		name: 'Solidity',
+		icon: <SiSolidity className="m-4 text-6xl text-violet-600" />,
+	},
+	{
+		index: 6,
 		name: 'Rust',
 		icon: <FaRust className="m-4 text-6xl text-orange-600" />,
-	}
+	},
 ];
 
 const frameworkTools: Tool[] = [
 	{
 		index: 0,
-		name: 'Next.js',
-		icon: <TbBrandNextjs className={'m-4 text-6xl text-white'} />,
+		name: 'React',
+		icon: <TbBrandReact className={'m-4 text-6xl text-cyan-700'} />,
 	},
 	{
 		index: 1,
-		name: 'Django',
-		icon: <SiDjango className={'m-4 text-6xl text-green-800'} />,
+		name: 'Next.js',
+		icon: <TbBrandNextjs className={'m-4 text-6xl text-black'} />,
 	},
 	{
 		index: 2,
@@ -68,13 +84,23 @@ const frameworkTools: Tool[] = [
 	},
 	{
 		index: 3,
-		name: 'Flutter',
-		icon: <SiFlutter className={'m-4 text-6xl text-cyan-500'} />,
+		name: 'Django',
+		icon: <SiDjango className={'m-4 text-6xl text-green-800'} />,
 	},
 	{
 		index: 4,
-		name: 'Android',
-		icon: <BsAndroid2 className={'m-4 text-6xl text-green-600'} />,
+		name: 'Gin',
+		icon: <SiGin className={'m-4 text-6xl text-orange-500'} />,
+	},
+	{
+		index: 5,
+		name: 'Hardhat',
+		icon: <FaHardHat className={'m-4 text-6xl text-yellow-400'} />,
+	},
+	{
+		index: 6,
+		name: 'Alchemy',
+		icon: <SiAlchemy className={'m-4 text-6xl text-blue-600'} />,
 	},
 ];
 
@@ -96,8 +122,8 @@ const databaseTools: Tool[] = [
 	},
 	{
 		index: 3,
-		name: 'SQLite',
-		icon: <SiSqlite className={'m-4 text-6xl text-blue-600'} />,
+		name: 'Redis',
+		icon: <SiRedis className={'m-4 text-6xl text-red-600'} />,
 	},
 ];
 
@@ -119,6 +145,16 @@ const otherTools = [
 	},
 	{
 		index: 3,
+		name: 'AWS',
+		icon: <SiAmazonaws className={'m-4 text-6xl text-yellow-500'} />,
+	},
+	{
+		index: 4,
+		name: 'MS Azure',
+		icon: <SiMicrosoftazure className={'m-4 text-6xl text-blue-700'} />,
+	},
+	{
+		index: 5,
 		name: 'Firebase',
 		icon: <SiFirebase className={'m-4 text-6xl text-yellow-600'} />,
 	},
@@ -126,7 +162,7 @@ const otherTools = [
 
 const columnHeaders = [
 	{
-		name: 'Languages',
+		name: 'PG Langs',
 		tools: languageTools,
 	},
 	{
@@ -138,7 +174,7 @@ const columnHeaders = [
 		tools: databaseTools,
 	},
 	{
-		name: 'Other',
+		name: 'DevOps',
 		tools: otherTools,
 	},
 ];
@@ -150,7 +186,7 @@ export default function ToolBox() {
 		<>
 			<Element name="toolbox" className="relative" />
 			<div className="mx-5 mb-48 overflow-hidden rounded-xl  border-2 border-cyan-300 bg-cyan-100 px-4 pb-5 pt-6 text-gray-700 dark:border-0 dark:bg-gray-800 dark:text-white md:mx-10 md:px-8 md:pb-8">
-				<h3 className="text-center text-2xl font-medium md:text-3xl">My Toolbox</h3>
+				<h3 className="text-center text-2xl font-medium md:text-3xl">My Expertise</h3>
 				<div className="mt-6 flex flex-col sm:flex-row">
 					<div className="mb-5 flex flex-row justify-between overflow-scroll rounded-xl bg-cyan-200 px-2 py-5 dark:bg-gray-700 sm:mb-0 sm:mr-8 sm:flex-col sm:overflow-visible md:px-5">
 						{columnHeaders.map((columnHeader) => {
