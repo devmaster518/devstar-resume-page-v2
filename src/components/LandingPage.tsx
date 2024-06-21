@@ -1,4 +1,4 @@
-import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin, AiFillSkype } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
@@ -106,7 +106,7 @@ export default function LandingPage() {
 					<a
 						href="https://github.com/devmaster518"
 						target="_blank"
-						aria-label="Github"
+						aria-label="GitHub"
 						rel="noreferrer"
 						className="group hover:cursor-pointer hover:text-black dark:hover:text-white"
 					>
@@ -121,7 +121,17 @@ export default function LandingPage() {
 						className="group hover:cursor-pointer hover:text-cyan-800 dark:hover:text-cyan-500"
 					>
 						<AiFillLinkedin />
-						<p className=" invisible  text-xs group-hover:visible">LinkedIn</p>
+						<p className="invisible text-xs group-hover:visible">LinkedIn</p>
+					</a>
+					<a
+						href="skype:live:.cid.3592c9df0706eb6c?call"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="Skype"
+						className="group hover:cursor-pointer hover:text-cyan-800 dark:hover:text-cyan-500"
+					>
+						<AiFillSkype />
+						<p className="invisible text-xs group-hover:visible">Skype</p>
 					</a>
 				</div>
 			</div>
