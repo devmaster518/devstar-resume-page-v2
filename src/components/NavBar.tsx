@@ -154,7 +154,7 @@ export default function NavBar() {
 						onClick={() => animateScroll.scrollToTop()}
 						className="group text-lg transition duration-300 sm:text-xl"
 					>
-						Wang's CV site
+						Wang&apos;s CV site
 						<span className="block h-0.5 max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</button>
 					<div className="flex">
