@@ -1,6 +1,7 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Geologica } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import React from 'react';
 
 const geologica = Geologica({
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body suppressHydrationWarning={true} className={geologica.className}>
 				{children}
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);

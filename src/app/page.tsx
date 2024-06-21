@@ -19,7 +19,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<ThemeProvider attribute="class" defaultTheme="light">
+		<ThemeProvider attribute="class" defaultTheme="dark">
 			{mounted && (
 				<AnimatedCursor
 					innerSize={8}
