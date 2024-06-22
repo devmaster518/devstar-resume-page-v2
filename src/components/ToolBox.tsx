@@ -12,6 +12,7 @@ import {
 	SiRedis,
 	SiAmazonaws,
 	SiMicrosoftazure,
+	SiTensorflow,
 } from 'react-icons/si';
 import { FaRust, FaHardHat } from 'react-icons/fa';
 import { BsGit } from 'react-icons/bs';
@@ -89,16 +90,21 @@ const frameworkTools: Tool[] = [
 	},
 	{
 		index: 4,
+		name: 'TensorFlow',
+		icon: <SiTensorflow className={'m-4 text-6xl text-orange-600'} />,
+	},
+	{
+		index: 5,
 		name: 'Gin',
 		icon: <SiGin className={'m-4 text-6xl text-orange-500'} />,
 	},
 	{
-		index: 5,
+		index: 6,
 		name: 'Hardhat',
 		icon: <FaHardHat className={'m-4 text-6xl text-yellow-400'} />,
 	},
 	{
-		index: 6,
+		index: 7,
 		name: 'Alchemy',
 		icon: <SiAlchemy className={'m-4 text-6xl text-blue-600'} />,
 	},

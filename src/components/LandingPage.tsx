@@ -17,7 +17,7 @@ export default function LandingPage() {
 
 	const titles = [
 		'Senior NodeJS Engineer',
-		'Senior Python Engineer',
+		'Professional Python (AI) Engineer',
 		'Enthusiastic GoLang Developer',
 		'Smart Rust Developer',
 	];
