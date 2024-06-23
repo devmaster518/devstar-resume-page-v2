@@ -65,12 +65,12 @@ export default function ContactMe() {
 				<span className="flex items-center pb-4">
 					<AiOutlineMail className="mr-2" />
 					<Link
-						href="mailto: christendennis779@gmail.com"
+						href="mailto: xwang.star214@gmail.com"
 						className="group transition duration-300"
 						rel="noreferrer"
 						target="_blank"
 					>
-						christendennis779@gmail.com
+						xwang.star214@gmail.com
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
