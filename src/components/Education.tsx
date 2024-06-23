@@ -14,7 +14,7 @@ export default function Education() {
 					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500 dark:border-gray-800 dark:text-white dark:hover:border-cyan-700">
 						<Fade left>
 							<div>
-								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2021</p>
+								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2022</p>
 								<p className="my-1 text-xl font-medium">Web3 Solidity Bootcamp</p>
 								<p className="my-1 text-sm font-medium">Online BootCamp at Metana</p>
 								{/* <p className="text-sm">Grade: 89.5% </p> */}
@@ -25,7 +25,7 @@ export default function Education() {
 									alt="Metana Web3 Solidity Bootcamp Logo"
 									width={100}
 									height={100}
-									title="Web3 Solidity Bootcamp 2021"
+									title="Web3 Solidity Bootcamp 2022"
 									onClick={() => {
 										window.open('https://metana.io/web3-0-bootcamp/', '_blank');
 									}}
@@ -37,8 +37,8 @@ export default function Education() {
 					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500 dark:border-gray-800 dark:text-white dark:hover:border-cyan-700">
 						<Fade left>
 							<div>
-								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2018</p>
-								<p className="my-1 text-xl font-medium">The Complete NodeJs Development Bootcamp 2018</p>
+								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2020</p>
+								<p className="my-1 text-xl font-medium">The Complete NodeJs Development Bootcamp 2020</p>
 								<p className="my-1 text-sm font-medium">Online Coding BootCamp</p>
 								{/* <p className="text-sm">Grade: 89.5% </p> */}
 							</div>
@@ -48,7 +48,7 @@ export default function Education() {
 									alt="Udemy Bootcamp Logo"
 									width={100}
 									height={100}
-									title="Udemy NodeJS Dev Bootcamp 2018"
+									title="Udemy NodeJS Dev Bootcamp 2020"
 									onClick={() => {
 										window.open('https://www.udemy.com/course/the-complete-nodejs-development-bootcamp/', '_blank');
 									}}

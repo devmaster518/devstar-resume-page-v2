@@ -12,7 +12,7 @@ export default function AboutMe() {
 				</h3>
 				<div className="mx-4 flex flex-col items-center justify-around rounded-xl border-2 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
 					<Image
-						src="/profile_pic.png"
+						src="/profile_pic.jpg"
 						alt="Wang Xing (王星)"
 						width={480}
 						height={480}
