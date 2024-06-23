@@ -43,9 +43,11 @@ export default function ContactMe() {
 			)
 			.then(
 				(result) => {
+					// console.log(result);
 					setStatus('Sent!');
 				},
 				(error) => {
+					console.log(error);
 					setStatus('Error!');
 					setTimeout(() => {
 						setStatus('Submit');
@@ -63,12 +65,12 @@ export default function ContactMe() {
 				<span className="flex items-center pb-4">
 					<AiOutlineMail className="mr-2" />
 					<Link
-						href="mailto: xwang.star214@gmail.com"
+						href="mailto: christendennis779@gmail.com"
 						className="group transition duration-300"
 						rel="noreferrer"
 						target="_blank"
 					>
-						xwang.star214@gmail.com
+						christendennis779@gmail.com
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
