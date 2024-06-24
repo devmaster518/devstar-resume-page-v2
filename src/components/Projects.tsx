@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { AiFillGithub } from 'react-icons/ai';
+import { AiOutlineLink } from 'react-icons/ai';
 import Fade from 'react-reveal/Fade';
 import { useTheme } from 'next-themes';
 import { Element } from 'react-scroll';
@@ -12,6 +12,7 @@ interface Project {
 	image_dark: string;
 	description: string;
 	name: string;
+	tech: string;
 	demo_link: string;
 	github_link: string;
 	hover_gif_dark: string;
@@ -44,69 +45,75 @@ export default function Projects() {
 	const projects: Project[] = [
 		{
 			index: 0,
-			image: '/project_thumbnails/light/asclepius.png',
-			image_dark: '/project_thumbnails/dark/asclepius.png',
-			description: 'Desktop Application',
-			name: 'Asclepius',
+			image: '/project_thumbnails/light/kaguaruoo.jpg',
+			image_dark: '/project_thumbnails/dark/kaguaruoo.jpg',
+			description: 'Web Application',
+			name: 'KagoAruoo',
+			tech: 'Ruby on Rails, Coffee Script, PostgreSQL, WordPress',
 			demo_link: '#',
-			github_link: 'https://github.com/devmaster518/asclepius',
-			hover_gif_dark: '/project_gifs/dark/asclepius.gif',
-			hover_gif_light: '/project_gifs/light/asclepius.gif',
+			github_link: 'https://kaguaruoo.com/en',
+			hover_gif_dark: '/project_gifs/dark/kaguaruoo.jpg',
+			hover_gif_light: '/project_gifs/light/kaguaruoo.jpg',
 		},
 		{
 			index: 1,
-			image: '/project_thumbnails/spot-clone.png',
-			image_dark: '/project_thumbnails/spot-clone.png',
-			description: 'Web Application',
-			name: 'Spot Clone',
-			demo_link: 'https://spot-clonee.netlify.app/',
-			github_link: 'https://github.com/devmaster518/spot-clone',
-			hover_gif_dark: '/project_gifs/spot-clone.gif',
-			hover_gif_light: '/project_gifs/spot-clone.gif',
+			image: '/project_thumbnails/light/clinics.jpg',
+			image_dark: '/project_thumbnails/dark/clinics.jpg',
+			description: 'Web & Mobile Application',
+			name: 'CLINICS（クリニクス）',
+			tech: 'React, Next.js, Styled-Components, Node.js, Firebase',
+			demo_link: '#',
+			github_link: 'https://clinics-app.com/',
+			hover_gif_dark: '/project_gifs/dark/clinics.jpg',
+			hover_gif_light: '/project_gifs/light/clinics.jpg',
 		},
 		{
 			index: 2,
-			image: '/project_thumbnails/light/bu-news-android.png',
-			image_dark: '/project_thumbnails/dark/bu-news-android.png',
-			description: 'Android Application',
-			name: 'BU News',
+			image: '/project_thumbnails/light/myschoolconnect.jpg',
+			image_dark: '/project_thumbnails/dark/myschoolconnect.png',
+			description: 'iOS / Android Application',
+			name: 'MY SCHOOL CONNECT AU',
+			tech: 'React-Native, PHP, WordPress, jQuery, Mobile App Development',
 			demo_link: '#',
-			github_link: 'https://github.com/devmaster518/bu-news-android',
-			hover_gif_dark: '/project_gifs/dark/bu-news-android.gif',
-			hover_gif_light: '/project_gifs/light/bu-news-android.gif',
+			github_link: 'https://myschoolconnect.com.au/',
+			hover_gif_dark: '/project_gifs/dark/myschoolconnect.png',
+			hover_gif_light: '/project_gifs/light/myschoolconnect.jpg',
 		},
 		{
 			index: 3,
-			image: '/project_thumbnails/light/bu-news.png',
-			image_dark: '/project_thumbnails/dark/bu-news.png',
-			description: 'Web Application',
-			name: 'BU News',
-			demo_link: 'https://bu-news.vercel.app/',
-			github_link: 'https://github.com/devmaster518/bu-news-website',
-			hover_gif_dark: '/project_gifs/dark/bu-news.gif',
-			hover_gif_light: '/project_gifs/light/bu-news.gif',
+			image: '/project_thumbnails/light/kindy.jpg',
+			image_dark: '/project_thumbnails/dark/kindy.jpg',
+			description: 'Web & Mobile Application',
+			name: 'Kindy',
+			tech: 'React, Angular, Ionic Framework, Node.js, LoopBack, MongoDB, AWS, CI/CD, NewRelic',
+			demo_link: '#',
+			github_link: 'https://kindy-app.jp/',
+			hover_gif_dark: '/project_gifs/dark/kindy.jpg',
+			hover_gif_light: '/project_gifs/light/kindy.jpg',
 		},
 		{
 			index: 4,
-			image: '/project_thumbnails/light/weatherly.png',
-			image_dark: '/project_thumbnails/dark/weatherly.png',
+			image: '/project_thumbnails/light/drapefit.jpg',
+			image_dark: '/project_thumbnails/dark/drapefit.jpg',
 			description: 'Web Application',
-			name: 'Weatherly',
-			demo_link: 'https://weatherrly.vercel.app/',
-			github_link: 'https://github.com/devmaster518/weatherly',
-			hover_gif_dark: '/project_gifs/dark/weatherly.gif',
-			hover_gif_light: '/project_gifs/light/weatherly.gif',
+			name: 'Drape Fit Inc.',
+			tech: 'React, Express, Node.js, MongoDB, AWS, PHP, cPanel, Angular, Java',
+			demo_link: '#',
+			github_link: 'https://www.drapefit.com/',
+			hover_gif_dark: '/project_gifs/dark/drapefit.jpg',
+			hover_gif_light: '/project_gifs/light/drapefit.jpg',
 		},
 		{
 			index: 5,
-			image: '/project_thumbnails/light/bug-squash.png',
-			image_dark: '/project_thumbnails/dark/bug-squash.png',
+			image: '/project_thumbnails/light/spoken.jpg',
+			image_dark: '/project_thumbnails/dark/spoken.jpg',
 			description: 'Web Application',
-			name: 'Bug Squash',
-			demo_link: 'https://bug-squash.co',
-			github_link: 'https://github.com/devmaster518/bug-squash',
-			hover_gif_dark: '/project_gifs/dark/bug-squash.gif',
-			hover_gif_light: '/project_gifs/light/bug-squash.gif',
+			name: 'Spoken',
+			tech: 'Next.js, Express, GraphQL, PostgreSQL, Docker, Algolia',
+			demo_link: '#',
+			github_link: 'https://www.spoken.io/',
+			hover_gif_dark: '/project_gifs/dark/spoken.jpg',
+			hover_gif_light: '/project_gifs/light/spoken.jpg',
 		},
 	];
 
@@ -149,6 +156,7 @@ export default function Projects() {
 									<div className={`w-full`}>
 										<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">{project.description}</p>
 										<p className="my-1 text-xl font-medium">{project.name}</p>
+										<p className="my-1 text-sm text-orange-500">{project.tech}</p>
 										<div className="flex justify-between">
 											<Link
 												className="text-sm"
@@ -168,8 +176,8 @@ export default function Projects() {
 												{project.demo_link === '#' ? '' : 'Visit'}
 												<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 											</Link>
-											<Link href={project.github_link} rel="noreferrer" title="Github Link" target="_blank">
-												<AiFillGithub className="inline-block text-4xl text-black transition delay-75 ease-in-out hover:scale-125 dark:text-white" />
+											<Link href={project.github_link} rel="noreferrer" title="Visit website" target="_blank">
+												<AiOutlineLink className="inline-block text-4xl text-black transition delay-75 ease-in-out hover:scale-125 dark:text-white" />
 											</Link>
 										</div>
 									</div>

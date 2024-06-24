@@ -1,4 +1,4 @@
-import { AiFillGithub, AiFillLinkedin, AiFillSkype } from 'react-icons/ai';
+import { AiFillGithub, AiFillLinkedin, AiFillSkype, AiOutlineWhatsApp } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
@@ -132,6 +132,16 @@ export default function LandingPage() {
 					>
 						<AiFillSkype />
 						<p className="invisible text-xs group-hover:visible">Skype</p>
+					</a>
+					<a
+						href="https://wa.me/447940728737"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="Whatsapp"
+						className="group hover:cursor-pointer hover:text-green-800 dark:hover:text-green-500"
+					>
+						<AiOutlineWhatsApp />
+						<p className="invisible text-xs group-hover:visible">Whatsapp</p>
 					</a>
 				</div>
 			</div>
