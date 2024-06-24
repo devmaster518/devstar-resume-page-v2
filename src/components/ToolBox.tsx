@@ -13,10 +13,11 @@ import {
 	SiAmazonaws,
 	SiMicrosoftazure,
 	SiTensorflow,
+	SiGraphql,
 } from 'react-icons/si';
 import { FaRust, FaHardHat } from 'react-icons/fa';
 import { BsGit } from 'react-icons/bs';
-import { BiLogoJavascript, BiLogoGoLang } from 'react-icons/bi';
+import { BiLogoGoLang, BiLogoNodejs } from 'react-icons/bi';
 import { FcLinux } from 'react-icons/fc';
 import { FaDocker } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
@@ -32,8 +33,8 @@ interface Tool {
 const languageTools: Tool[] = [
 	{
 		index: 0,
-		name: 'NodeJS',
-		icon: <BiLogoJavascript className={'m-4 text-6xl text-yellow-500'} />,
+		name: 'JS/TS',
+		icon: <BiLogoNodejs className={'m-4 text-6xl text-green-500'} />,
 	},
 	{
 		index: 1,
@@ -131,6 +132,11 @@ const databaseTools: Tool[] = [
 		name: 'Redis',
 		icon: <SiRedis className={'m-4 text-6xl text-red-600'} />,
 	},
+	{
+		index: 4,
+		name: 'GraphQL',
+		icon: <SiGraphql className={'m-4 text-6xl text-pink-600'} />,
+	},
 ];
 
 const otherTools = [
@@ -192,7 +198,7 @@ export default function ToolBox() {
 		<>
 			<Element name="toolbox" className="relative" />
 			<div className="mx-5 mb-48 overflow-hidden rounded-xl  border-2 border-cyan-300 bg-cyan-100 px-4 pb-5 pt-6 text-gray-700 dark:border-0 dark:bg-gray-800 dark:text-white md:mx-10 md:px-8 md:pb-8">
-				<h3 className="text-center text-2xl font-medium md:text-3xl">My Expertise</h3>
+				<h3 className="text-center text-2xl font-medium md:text-3xl">Expertise</h3>
 				<div className="mt-6 flex flex-col sm:flex-row">
 					<div className="mb-5 flex flex-row justify-between overflow-scroll rounded-xl bg-cyan-200 px-2 py-5 dark:bg-gray-700 sm:mb-0 sm:mr-8 sm:flex-col sm:overflow-visible md:px-5">
 						{columnHeaders.map((columnHeader) => {

@@ -61,7 +61,7 @@ function navLinks() {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					Toolbox
+					Expertise
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>

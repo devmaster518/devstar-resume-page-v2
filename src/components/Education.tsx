@@ -38,7 +38,7 @@ export default function Education() {
 						<Fade left>
 							<div>
 								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2020</p>
-								<p className="my-1 text-xl font-medium">The Complete NodeJs Development Bootcamp 2020</p>
+								<p className="my-1 text-xl font-medium">The Complete NodeJS Development Bootcamp 2020</p>
 								<p className="my-1 text-sm font-medium">Online Coding BootCamp</p>
 								{/* <p className="text-sm">Grade: 89.5% </p> */}
 							</div>
@@ -61,7 +61,7 @@ export default function Education() {
 						<Fade left>
 							<div>
 								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2010-2015</p>
-								<p className="my-1 font-medium sm:text-xl">B.Science in Math & Computer Science</p>
+								<p className="my-1 font-medium sm:text-xl">B. Science in Math & Computer Science</p>
 								<p className="my-1 text-sm font-medium">Dalian University of Technology</p>
 								{/* <p className="text-sm">CGPA: 9.66</p> */}
 							</div>
