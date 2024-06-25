@@ -62,12 +62,12 @@ export default function ContactMe() {
 	return (
 		<div className="flex flex-col items-center justify-center border-t-2 border-cyan-400 bg-cyan-100 py-5 text-gray-700 dark:border-0 dark:bg-gray-800 dark:text-white sm:flex-row">
 			<div className="min-w-1/2 flex flex-col justify-center sm:mr-10">
-				<div className="flex flex-col items-center justify-around rounded-xl border-2 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
+				<div className="flex flex-col items-center justify-around rounded-xl border-0 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
 					<Image
 						src="/profile_pic.jpg"
 						alt="Wang Xing (王星)"
-						width={240}
-						height={240}
+						width={480}
+						height={480}
 						className="w-full max-w-[200px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
 					/>
 				</div>

@@ -10,6 +10,7 @@ import Education from '@/components/Education';
 import ToolBox from '@/components/ToolBox';
 import Projects from '@/components/Projects';
 import ContactMe from '@/components/ContactMe';
+import Footer from '@/components/Footer';
 
 export default function Home() {
 	const [mounted, setMounted] = useState(false);
@@ -54,6 +55,7 @@ export default function Home() {
 				{/* Footer/Contact Me Section */}
 				<section>
 					<ContactMe />
+					<Footer />
 				</section>
 			</main>
 		</ThemeProvider>
