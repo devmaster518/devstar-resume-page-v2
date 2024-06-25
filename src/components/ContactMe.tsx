@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { AiOutlineLink, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import emailjs from '@emailjs/browser';
 import { FormEvent, useRef, useState } from 'react';
@@ -61,7 +62,16 @@ export default function ContactMe() {
 	return (
 		<div className="flex flex-col items-center justify-center border-t-2 border-cyan-400 bg-cyan-100 py-5 text-gray-700 dark:border-0 dark:bg-gray-800 dark:text-white sm:flex-row">
 			<div className="min-w-1/2 flex flex-col justify-center sm:mr-10">
-				<h2 className="pb-8 pt-8 text-5xl sm:pt-0">Get in touch</h2>
+				<div className="flex flex-col items-center justify-around rounded-xl border-2 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
+					<Image
+						src="/profile_pic.jpg"
+						alt="Wang Xing (王星)"
+						width={240}
+						height={240}
+						className="w-full max-w-[200px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
+					/>
+				</div>
+				<h2 className="pb-8 text-5xl sm:pt-0">Get in touch</h2>
 				<span className="flex items-center pb-4">
 					<AiOutlineMail className="mr-2" />
 					<Link
