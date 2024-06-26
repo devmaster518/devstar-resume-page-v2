@@ -65,7 +65,7 @@ export default function ContactMe() {
 				<div className="flex flex-col items-center justify-around rounded-xl border-0 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
 					<Image
 						src="/profile_pic.jpg"
-						alt="Wang Xing (王星)"
+						alt="Din Wang (王定)"
 						width={480}
 						height={480}
 						className="w-full max-w-[200px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
@@ -75,12 +75,12 @@ export default function ContactMe() {
 				<span className="flex items-center pb-4">
 					<AiOutlineMail className="mr-2" />
 					<Link
-						href="mailto: xwang.star214@gmail.com"
+						href="mailto: devking0727.wang@gmail.com"
 						className="group transition duration-300"
 						rel="noreferrer"
 						target="_blank"
 					>
-						xwang.star214@gmail.com
+						devking0727.wang@gmail.com
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>

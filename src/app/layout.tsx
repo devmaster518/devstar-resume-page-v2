@@ -11,9 +11,9 @@ const geologica = Geologica({
 });
 
 export const metadata = {
-	title: 'Xing Wang | Senior Developer',
+	title: 'Din Wang | Senior Developer',
 	description:
-		"Showcasing the projects, skills, and achievements of Xing Wang, a talented computer science engineering student from India. Explore Xing Wang's expertise in programming, problem-solving, and technical development through this carefully curated portfolio.",
+		"Showcasing the projects, skills, and achievements of Din Wang, a talented computer science engineering student from India. Explore Din Wang's expertise in programming, problem-solving, and technical development through this carefully curated portfolio.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

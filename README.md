@@ -6,6 +6,10 @@ DevStar's Personal Resume Website v2 (built with Next.js `14.1.4`)
 
 ## Getting Started
 
+```yaml
+node.js: ^18.17.0
+```
+
 ```bash
 # install dependencies
 $ yarn install

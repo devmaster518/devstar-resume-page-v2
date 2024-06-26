@@ -13,7 +13,7 @@ export default function AboutMe() {
 				<div className="mx-4 flex flex-col items-center justify-around rounded-xl border-2 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
 					<Image
 						src="/greeting_pic.jpg"
-						alt="Wang Xing (王星)"
+						alt="Din Wang (王定)"
 						width={480}
 						height={480}
 						className="mb-10 w-full max-w-[380px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
