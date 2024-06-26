@@ -42,7 +42,7 @@ export default function Education() {
 			index: 0,
 			image: '/project_thumbnails/light/dlut.jpg',
 			image_dark: '/project_thumbnails/dark/dlut.jpg',
-			name: 'Dalian University of Technologies',
+			name: 'Dalian University of Technology',
 			degree: 'B. Science in Math & Computer Science',
 			hover_gif_dark: '/project_gifs/dark/dlut.jpg',
 			hover_gif_light: '/project_gifs/light/dlut.jpg',
