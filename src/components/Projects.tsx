@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { AiOutlineLink } from 'react-icons/ai';
+import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
 import Fade from 'react-reveal/Fade';
 import { useTheme } from 'next-themes';
 import { Element } from 'react-scroll';
@@ -115,6 +115,30 @@ export default function Projects() {
 			hover_gif_dark: '/project_gifs/dark/spoken.jpg',
 			hover_gif_light: '/project_gifs/light/spoken.jpg',
 		},
+		{
+			index: 6,
+			image: '/project_thumbnails/light/ape.jpg',
+			image_dark: '/project_thumbnails/dark/ape.jpg',
+			description: 'Web3 Marketplace',
+			name: 'ApeWorld WOV Marketplace',
+			tech: 'React, Web3, Ether.js, GraphQL, NFT, ABI',
+			demo_link: '#',
+			github_link: 'https://github.com/devmaster518/ape-world-wov-marketplace',
+			hover_gif_dark: '/project_gifs/dark/ape.jpg',
+			hover_gif_light: '/project_gifs/light/ape.jpg',
+		},
+		{
+			index: 7,
+			image: '/project_thumbnails/light/healthcare.jpg',
+			image_dark: '/project_thumbnails/dark/healthcare.jpg',
+			description: 'Web Application',
+			name: 'Health Care Plus',
+			tech: 'React, React-Toastify, FontAwesome',
+			demo_link: 'https://health-care-plus.vercel.app/',
+			github_link: 'https://github.com/devmaster518/health-care-plus',
+			hover_gif_dark: '/project_gifs/dark/healthcare.jpg',
+			hover_gif_light: '/project_gifs/light/healthcare.jpg',
+		},
 	];
 
 	return (
@@ -176,8 +200,17 @@ export default function Projects() {
 												{project.demo_link === '#' ? '' : 'Visit'}
 												<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 											</Link>
-											<Link href={project.github_link} rel="noreferrer" title="Visit website" target="_blank">
-												<AiOutlineLink className="inline-block text-4xl text-black transition delay-75 ease-in-out hover:scale-125 dark:text-white" />
+											<Link
+												href={project.github_link}
+												rel="noreferrer"
+												title={project.github_link.includes('github.com') ? 'View GitHub Repo' : 'Visit Website'}
+												target="_blank"
+											>
+												{project.github_link.includes('github.com') ? (
+													<AiFillGithub className="inline-block text-4xl text-black transition delay-75 ease-in-out hover:scale-125 dark:text-white" />
+												) : (
+													<AiOutlineLink className="inline-block text-4xl text-black transition delay-75 ease-in-out hover:scale-125 dark:text-white" />
+												)}
 											</Link>
 										</div>
 									</div>

@@ -14,6 +14,7 @@ import {
 	SiMicrosoftazure,
 	SiTensorflow,
 	SiGraphql,
+	SiSolana,
 } from 'react-icons/si';
 import { FaRust, FaHardHat } from 'react-icons/fa';
 import { BsGit } from 'react-icons/bs';
@@ -108,6 +109,11 @@ const frameworkTools: Tool[] = [
 		index: 7,
 		name: 'Alchemy',
 		icon: <SiAlchemy className={'m-4 text-6xl text-blue-600'} />,
+	},
+	{
+		index: 8,
+		name: 'Solana',
+		icon: <SiSolana className={'m-4 text-6xl text-blue-500'} />,
 	},
 ];
 
