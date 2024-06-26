@@ -99,7 +99,7 @@ export default function ContactMe() {
 				<span className="flex items-center">
 					<AiOutlineLink className="mr-2" />
 					<Link
-						href="https://drive.google.com/file/d/1RP9j9cfpteEAlECewSYs7ts2HHfnRNNH/view?usp=drive_link"
+						href="https://drive.google.com/file/d/1LruZw0Bw4T175bMvc_--t5nx69y475q7/view?usp=drive_link"
 						rel="noreferrer"
 						className="group transition duration-300"
 						target="_blank"
