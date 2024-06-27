@@ -1,5 +1,6 @@
 import { AiFillGithub, AiFillSkype, AiOutlineWhatsApp } from 'react-icons/ai';
 import { TbBrandTelegram } from 'react-icons/tb';
+import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
@@ -7,9 +8,14 @@ import TextTransition, { presets } from 'react-text-transition';
 export default function LandingPage() {
 	const line1 =
 		'Experienced in the dynamic world of NodeJS, Python, Go, and Rust, I am a Senior Developer ready to bring your projects to life.';
+	const line1JP =
+		'NodeJS、Python（AI）、Go、Rustの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。';
 	const line2 =
 		'With a passion for innovation and a knack for problem-solving, I am thriving in the fast-paced world of competition with you.';
+	const line2JP =
+		'イノベーションへの情熱と問題解決の才能を持ち、競争の激しい世界であなたと一緒に成長していきたいと考えています。';
 
+	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
 	useEffect(() => {
@@ -21,6 +27,12 @@ export default function LandingPage() {
 		'Professional Python (AI) Engineer',
 		'Enthusiastic GoLang Developer',
 		'Smart Rust Developer',
+	];
+	const titlesJP = [
+		'シニアNodeJSエンジニア',
+		'プロ Python (AI) エンジニア',
+		'情熱的なGoLang開発者',
+		'スマートRust開発者',
 	];
 	const [titleIndex, setTitleIndex] = useState(0);
 
@@ -35,15 +47,19 @@ export default function LandingPage() {
 		<div className="min-h-[100dvh] w-full md:flex md:items-center md:justify-center">
 			<div className="px-10 pt-10 text-center">
 				<h1 className="py-2 text-3xl font-medium text-cyan-700 dark:text-cyan-600 sm:text-4xl md:text-5xl">
-					Din Wang (王定)
+					{theme === 'dark' ? 'Din Wang (王定)' : 'Wang Din（王定）'}
 				</h1>
 
 				{mounted ? (
 					<TextTransition springConfig={presets.default} className="flex items-center justify-center">
-						<p className="py-2 text-xl font-medium sm:text-2xl">{titles[titleIndex % titles.length]}</p>
+						<p className="py-2 text-xl font-medium sm:text-2xl">
+							{theme === 'dark' ? titles[titleIndex % titles.length] : titlesJP[titleIndex % titles.length]}
+						</p>
 					</TextTransition>
 				) : (
-					<p className="py-2 text-xl font-medium sm:text-2xl">{titles[titleIndex % titles.length]}</p>
+					<p className="py-2 text-xl font-medium sm:text-2xl">
+						{theme === 'dark' ? titles[titleIndex % titles.length] : titlesJP[titleIndex % titles.length]}
+					</p>
 				)}
 
 				{mounted ? (
@@ -61,41 +77,75 @@ export default function LandingPage() {
 						}}
 						className="py-5 text-base leading-8 text-gray-600 dark:text-gray-400 md:text-lg"
 					>
-						{line1.split('').map((char, index) => {
-							return (
-								<motion.span
-									key={char + '-' + index}
-									variants={{
-										hidden: { opacity: 0, y: 50 },
-										visible: {
-											opacity: 1,
-											y: 0,
-										},
-									}}
-								>
-									{char}
-								</motion.span>
-							);
-						})}
+						{theme === 'dark'
+							? line1.split('').map((char, index) => {
+									return (
+										<motion.span
+											key={char + '-' + index}
+											variants={{
+												hidden: { opacity: 0, y: 50 },
+												visible: {
+													opacity: 1,
+													y: 0,
+												},
+											}}
+										>
+											{char}
+										</motion.span>
+									);
+								})
+							: line1JP.split('').map((char, index) => {
+									return (
+										<motion.span
+											key={char + '-' + index}
+											variants={{
+												hidden: { opacity: 0, y: 50 },
+												visible: {
+													opacity: 1,
+													y: 0,
+												},
+											}}
+										>
+											{char}
+										</motion.span>
+									);
+								})}
 
 						<br />
 
-						{line2.split('').map((char, index) => {
-							return (
-								<motion.span
-									key={char + '-' + index}
-									variants={{
-										hidden: { opacity: 0, y: 50 },
-										visible: {
-											opacity: 1,
-											y: 0,
-										},
-									}}
-								>
-									{char}
-								</motion.span>
-							);
-						})}
+						{theme === 'dark'
+							? line2.split('').map((char, index) => {
+									return (
+										<motion.span
+											key={char + '-' + index}
+											variants={{
+												hidden: { opacity: 0, y: 50 },
+												visible: {
+													opacity: 1,
+													y: 0,
+												},
+											}}
+										>
+											{char}
+										</motion.span>
+									);
+								})
+							: line2JP.split('').map((char, index) => {
+									return (
+										<motion.span
+											key={char + '-' + index}
+											variants={{
+												hidden: { opacity: 0, y: 50 },
+												visible: {
+													opacity: 1,
+													y: 0,
+												},
+											}}
+										>
+											{char}
+										</motion.span>
+									);
+								})}
 					</motion.h3>
 				) : (
 					<div className="py-5 text-base leading-8 text-gray-600 dark:text-gray-400 md:text-lg">
@@ -115,7 +165,7 @@ export default function LandingPage() {
 						<p className="invisible text-xs group-hover:visible">GitHub</p>
 					</a>
 					<a
-						href="https://t.me/devmaster518/"
+						href="https://t.me/denniswan518/"
 						target="_blank"
 						rel="noreferrer"
 						aria-label="Telegram"
@@ -125,7 +175,7 @@ export default function LandingPage() {
 						<p className="invisible text-xs group-hover:visible">Telegram</p>
 					</a>
 					<a
-						href="https://wa.me/447940728737"
+						href="https://wa.me/15816877831"
 						target="_blank"
 						rel="noreferrer"
 						aria-label="Whatsapp"

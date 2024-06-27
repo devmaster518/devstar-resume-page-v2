@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { AiOutlineLink, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import emailjs from '@emailjs/browser';
 import { FormEvent, useRef, useState } from 'react';
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 
 const validateEmail = (email: string) => {
@@ -13,6 +14,10 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactMe() {
+	const pdfLink = 'https://drive.google.com/file/d/1YJfoXdN7DSZfMoLnnaH-6vY9HejNc-Ta/view?usp=drive_link';
+	const pdfLinkJP = 'https://drive.google.com/file/d/13gtdx_5wtVi4yVKiWFDg7A-1_-XUojAE/view?usp=drive_link';
+
+	const { theme } = useTheme();
 	const form = useRef<HTMLFormElement | null>(null);
 	const [disable, setDisable] = useState<boolean>(false);
 	const [status, setStatus] = useState<string>('Submit');
@@ -71,7 +76,7 @@ export default function ContactMe() {
 						className="w-full max-w-[200px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
 					/>
 				</div>
-				<h2 className="pb-8 text-5xl sm:pt-0">Get in touch</h2>
+				<h2 className="pb-8 text-5xl sm:pt-0">{theme === 'dark' ? 'Get in touch' : 'コンタクト'}</h2>
 				<span className="flex items-center pb-4">
 					<AiOutlineMail className="mr-2" />
 					<Link
@@ -87,24 +92,24 @@ export default function ContactMe() {
 				<span className="flex items-center pb-4">
 					<AiOutlineWhatsApp className="mr-2" />
 					<Link
-						href="https://wa.me/447940728737"
+						href="https://wa.me/15816877831"
 						rel="noreferrer"
 						className="group transition duration-300"
 						target="_blank"
 					>
-						+447940728737
+						+15816877831
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
 				<span className="flex items-center">
 					<AiOutlineLink className="mr-2" />
 					<Link
-						href="https://drive.google.com/file/d/1LruZw0Bw4T175bMvc_--t5nx69y475q7/view?usp=drive_link"
+						href={theme === 'dark' ? pdfLink : pdfLinkJP}
 						rel="noreferrer"
 						className="group transition duration-300"
 						target="_blank"
 					>
-						Download Resume
+						{theme === 'dark' ? 'Download Resume' : '履歴書をダウンロード'}
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
@@ -117,21 +122,21 @@ export default function ContactMe() {
 			>
 				<input
 					type="text"
-					placeholder="Your Name"
+					placeholder={theme === 'dark' ? 'Your Name' : 'あなたのお名前は'}
 					name="from_name"
 					required
 					className="mb-2 h-10 max-w-xl rounded-lg border-2 bg-white p-5 text-sm hover:border-cyan-500 dark:border-transparent dark:bg-gray-900 dark:hover:border-gray-700"
 				/>
 				<input
 					type="email"
-					placeholder="Your Email"
+					placeholder={theme === 'dark' ? 'Your Email' : 'あなたのメールは'}
 					name="from_email"
 					required
 					className="mb-2 h-10 max-w-xl rounded-lg border-2 bg-white p-5 text-sm hover:border-cyan-500 dark:border-transparent dark:bg-gray-900 dark:hover:border-gray-700"
 				/>
 				<textarea
 					rows={5}
-					placeholder="Your Message"
+					placeholder={theme === 'dark' ? 'Your Message' : 'メッセージを入力してください'}
 					name="message"
 					minLength={10}
 					required

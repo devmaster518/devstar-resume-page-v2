@@ -21,6 +21,7 @@ import { BsGit } from 'react-icons/bs';
 import { BiLogoGoLang, BiLogoNodejs } from 'react-icons/bi';
 import { FcLinux } from 'react-icons/fc';
 import { FaDocker } from 'react-icons/fa';
+import { useTheme } from 'next-themes';
 import Fade from 'react-reveal/Fade';
 import { motion } from 'framer-motion';
 import { Element } from 'react-scroll';
@@ -181,30 +182,35 @@ const otherTools = [
 const columnHeaders = [
 	{
 		name: 'PG Langs',
+		nameJP: 'PG言語',
 		tools: languageTools,
 	},
 	{
 		name: 'Frameworks',
+		nameJP: 'フレームワーク',
 		tools: frameworkTools,
 	},
 	{
 		name: 'Databases',
+		nameJP: 'データベース',
 		tools: databaseTools,
 	},
 	{
 		name: 'DevOps',
+		nameJP: 'DevOps',
 		tools: otherTools,
 	},
 ];
 
 export default function ToolBox() {
 	const [tools, setTools] = useState(languageTools);
+	const { theme } = useTheme();
 
 	return (
 		<>
 			<Element name="toolbox" className="relative" />
 			<div className="mx-5 mb-48 overflow-hidden rounded-xl  border-2 border-cyan-300 bg-cyan-100 px-4 pb-5 pt-6 text-gray-700 dark:border-0 dark:bg-gray-800 dark:text-white md:mx-10 md:px-8 md:pb-8">
-				<h3 className="text-center text-2xl font-medium md:text-3xl">Expertise</h3>
+				<h3 className="text-center text-2xl font-medium md:text-3xl">{theme === 'dark' ? 'Expertise' : '専門知識'}</h3>
 				<div className="mt-6 flex flex-col sm:flex-row">
 					<div className="mb-5 flex flex-row justify-between overflow-scroll rounded-xl bg-cyan-200 px-2 py-5 dark:bg-gray-700 sm:mb-0 sm:mr-8 sm:flex-col sm:overflow-visible md:px-5">
 						{columnHeaders.map((columnHeader) => {
@@ -216,7 +222,7 @@ export default function ToolBox() {
 											setTools([...columnHeader.tools]);
 										}}
 									>
-										{columnHeader.name}
+										{theme === 'dark' ? columnHeader.name : columnHeader.nameJP}
 									</h4>
 								</Fade>
 							);

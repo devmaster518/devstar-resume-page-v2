@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { animateScroll, Link } from 'react-scroll';
 
-function navLinks() {
+function navLinks(theme: any) {
 	return (
 		<>
 			<li className="scroll-link mt-4 sm:my-0 sm:mr-4">
@@ -23,7 +23,7 @@ function navLinks() {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					About Me
+					{theme === 'dark' ? 'About Me' : '私について'}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>
@@ -42,7 +42,7 @@ function navLinks() {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					Education
+					{theme === 'dark' ? 'Education' : '教育'}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>
@@ -61,7 +61,7 @@ function navLinks() {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					Expertise
+					{theme === 'dark' ? 'Expertise' : '専門知識'}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>
@@ -80,7 +80,7 @@ function navLinks() {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					Projects
+					{theme === 'dark' ? 'Projects' : 'プロジェクト'}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>
@@ -96,7 +96,7 @@ function navLinks() {
 					}}
 					className="group w-full transition duration-300 hover:cursor-pointer"
 				>
-					Contact
+					{theme === 'dark' ? 'Contact' : 'コンタクト'}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</button>
 			</li>
@@ -154,7 +154,7 @@ export default function NavBar() {
 						onClick={() => animateScroll.scrollToTop()}
 						className="group text-lg transition duration-300 sm:text-xl"
 					>
-						Wang&apos;s CV site
+						{theme === 'dark' ? "Wang's CV site" : '王定の個人サイト'}
 						<span className="block h-0.5 max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</button>
 					<div className="flex">
@@ -174,7 +174,7 @@ export default function NavBar() {
 								}
 							}}
 						/>
-						<ul className="hidden flex-col items-center text-base md:flex md:flex-row">{navLinks()}</ul>
+						<ul className="hidden flex-col items-center text-base md:flex md:flex-row">{navLinks(theme)}</ul>
 
 						{
 							// Only show dark mode toggle if mounted and can be toggled
@@ -218,7 +218,7 @@ export default function NavBar() {
 				</div>
 				<div className={`flex w-full items-center justify-center`}>
 					<ul id="toggle-navbar" className="hidden w-fit space-y-2 text-center text-sm">
-						{navLinks()}
+						{navLinks(theme)}
 					</ul>
 				</div>
 			</nav>

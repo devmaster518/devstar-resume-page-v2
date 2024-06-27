@@ -11,6 +11,7 @@ interface Project {
 	image: string;
 	image_dark: string;
 	description: string;
+	descriptionJP: string;
 	name: string;
 	tech: string;
 	demo_link: string;
@@ -48,7 +49,8 @@ export default function Projects() {
 			image: '/project_thumbnails/light/kaguaruoo.jpg',
 			image_dark: '/project_thumbnails/dark/kaguaruoo.jpg',
 			description: 'Web Application',
-			name: 'KagoAruoo',
+			descriptionJP: 'webアプリケーション',
+			name: 'KagoAruoo JP',
 			tech: 'Ruby on Rails, Coffee Script, PostgreSQL, WordPress',
 			demo_link: '#',
 			github_link: 'https://kaguaruoo.com/en',
@@ -60,6 +62,7 @@ export default function Projects() {
 			image: '/project_thumbnails/light/clinics.jpg',
 			image_dark: '/project_thumbnails/dark/clinics.jpg',
 			description: 'Web & Mobile Application',
+			descriptionJP: 'web・Mobileアプリ',
 			name: 'CLINICS（クリニクス）',
 			tech: 'React, Next.js, Styled-Components, Node.js, Firebase',
 			demo_link: '#',
@@ -72,6 +75,7 @@ export default function Projects() {
 			image: '/project_thumbnails/light/myschoolconnect.jpg',
 			image_dark: '/project_thumbnails/dark/myschoolconnect.png',
 			description: 'iOS / Android Application',
+			descriptionJP: 'iOS・Androidアプリ',
 			name: 'MY SCHOOL CONNECT AU',
 			tech: 'React-Native, PHP, WordPress, jQuery, Mobile App Development',
 			demo_link: '#',
@@ -84,7 +88,8 @@ export default function Projects() {
 			image: '/project_thumbnails/light/kindy.jpg',
 			image_dark: '/project_thumbnails/dark/kindy.jpg',
 			description: 'Web & Mobile Application',
-			name: 'Kindy',
+			descriptionJP: 'web・Mobileアプリ',
+			name: 'Kindy JP',
 			tech: 'React, Angular, Ionic Framework, Node.js, LoopBack, MongoDB, AWS, CI/CD, NewRelic',
 			demo_link: '#',
 			github_link: 'https://kindy-app.jp/',
@@ -96,7 +101,8 @@ export default function Projects() {
 			image: '/project_thumbnails/light/drapefit.jpg',
 			image_dark: '/project_thumbnails/dark/drapefit.jpg',
 			description: 'Web Application',
-			name: 'Drape Fit Inc.',
+			descriptionJP: 'webアプリケーション',
+			name: 'Drape Fit Inc. US',
 			tech: 'React, Express, Node.js, MongoDB, AWS, PHP, cPanel, Angular, Java',
 			demo_link: 'https://www.drapefit.com/',
 			github_link: 'https://github.com/devmaster518/drapefit-bestfit-mern',
@@ -108,6 +114,7 @@ export default function Projects() {
 			image: '/project_thumbnails/light/spoken.jpg',
 			image_dark: '/project_thumbnails/dark/spoken.jpg',
 			description: 'Web Application',
+			descriptionJP: 'webアプリケーション',
 			name: 'Spoken',
 			tech: 'Next.js, Express, GraphQL, PostgreSQL, Docker, Algolia',
 			demo_link: '#',
@@ -120,6 +127,7 @@ export default function Projects() {
 			image: '/project_thumbnails/light/ape.jpg',
 			image_dark: '/project_thumbnails/dark/ape.jpg',
 			description: 'Web3 Marketplace',
+			descriptionJP: 'Web3マーケットプレイス',
 			name: 'ApeWorld WOV Marketplace',
 			tech: 'React, Web3, Ether.js, GraphQL, NFT, ABI',
 			demo_link: '#',
@@ -132,6 +140,7 @@ export default function Projects() {
 			image: '/project_thumbnails/light/healthcare.jpg',
 			image_dark: '/project_thumbnails/dark/healthcare.jpg',
 			description: 'Web Application',
+			descriptionJP: 'webアプリケーション',
 			name: 'Health Care Plus',
 			tech: 'React, React-Toastify, FontAwesome',
 			demo_link: 'https://health-care-plus.vercel.app/',
@@ -146,7 +155,7 @@ export default function Projects() {
 			<Element name="projects" className="relative" />
 			<div className="mb-48">
 				<h2 className="mb-16 text-center text-4xl font-medium text-gray-800 transition duration-300 dark:text-white lg:mb-20 xl:mb-24">
-					Projects
+					{theme === 'dark' ? 'Projects' : 'プロジェクト'}
 				</h2>
 				<div className="mx-0 grid grid-cols-1 grid-rows-2 sm:grid-cols-2 md:mx-4 lg:grid-cols-3">
 					{projects.map((project) => {
@@ -178,7 +187,9 @@ export default function Projects() {
 										/>
 									</div>
 									<div className={`w-full`}>
-										<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">{project.description}</p>
+										<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">
+											{theme === 'dark' ? project.description : project.descriptionJP}
+										</p>
 										<p className="my-1 text-xl font-medium">{project.name}</p>
 										<p className="my-1 text-sm text-orange-500">{project.tech}</p>
 										<div className="flex justify-between">
@@ -197,13 +208,21 @@ export default function Projects() {
 															}
 												}
 											>
-												{project.demo_link === '#' ? '' : 'Visit'}
+												{project.demo_link === '#' ? '' : theme === 'dark' ? 'Visit' : '訪問する'}
 												<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 											</Link>
 											<Link
 												href={project.github_link}
 												rel="noreferrer"
-												title={project.github_link.includes('github.com') ? 'View GitHub Repo' : 'Visit Website'}
+												title={
+													project.github_link.includes('github.com')
+														? theme === 'dark'
+															? 'View GitHub Repo'
+															: 'GitHub リポジトリにアクセス'
+														: theme === 'dark'
+															? 'Visit Website'
+															: 'サイトにアクセス'
+												}
 												target="_blank"
 											>
 												{project.github_link.includes('github.com') ? (
