@@ -103,7 +103,7 @@ export default function Education() {
 							<div>
 								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2020</p>
 								<p className="my-1 text-xl font-medium">
-									{title === 'dark'
+									{theme === 'dark'
 										? 'The Complete NodeJS Development Bootcamp 2020'
 										: '完全Node.js 開発ブートキャンプ 2020'}
 								</p>
