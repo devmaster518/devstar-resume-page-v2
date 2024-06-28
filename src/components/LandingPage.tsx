@@ -164,7 +164,7 @@ export default function LandingPage() {
 						<AiFillGithub />
 						<p className="invisible text-xs group-hover:visible">GitHub</p>
 					</a>
-					<a
+					{/* <a
 						href="https://t.me/denniswan518/"
 						target="_blank"
 						rel="noreferrer"
@@ -173,7 +173,7 @@ export default function LandingPage() {
 					>
 						<TbBrandTelegram />
 						<p className="invisible text-xs group-hover:visible">Telegram</p>
-					</a>
+					</a> */}
 					<a
 						href="https://wa.me/15816877831"
 						target="_blank"

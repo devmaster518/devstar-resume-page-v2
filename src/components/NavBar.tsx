@@ -1,6 +1,5 @@
 'use client';
-import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
-import { AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineAlipay, AiOutlineFontColors } from 'react-icons/ai';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -189,7 +188,7 @@ export default function NavBar() {
 												borderRadius: '100%',
 											}}
 										>
-											<BsFillMoonStarsFill
+											<AiOutlineAlipay
 												title="Toggle Light Mode"
 												className="cursor-pointer text-lg  hover:text-cyan-600 dark:hover:text-cyan-500 sm:text-2xl"
 												onClick={() => setTheme('light')}
@@ -204,7 +203,7 @@ export default function NavBar() {
 												borderRadius: '100%',
 											}}
 										>
-											<BsFillSunFill
+											<AiOutlineFontColors
 												title="Toggle Dark Mode"
 												className="cursor-pointer text-lg text-gray-700  hover:text-cyan-600 dark:hover:text-cyan-500 sm:text-2xl"
 												onClick={() => setTheme('dark')}
