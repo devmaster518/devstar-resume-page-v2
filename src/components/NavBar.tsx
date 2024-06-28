@@ -189,7 +189,7 @@ export default function NavBar() {
 											}}
 										>
 											<AiOutlineAlipay
-												title="Toggle Light Mode"
+												title="日本語"
 												className="cursor-pointer text-lg  hover:text-cyan-600 dark:hover:text-cyan-500 sm:text-2xl"
 												onClick={() => setTheme('light')}
 											/>
@@ -204,7 +204,7 @@ export default function NavBar() {
 											}}
 										>
 											<AiOutlineFontColors
-												title="Toggle Dark Mode"
+												title="English"
 												className="cursor-pointer text-lg text-gray-700  hover:text-cyan-600 dark:hover:text-cyan-500 sm:text-2xl"
 												onClick={() => setTheme('dark')}
 											/>
