@@ -1,4 +1,5 @@
 import { AiFillGithub, AiFillSkype, AiOutlineWhatsApp } from 'react-icons/ai';
+import { TbBrandTelegram } from 'react-icons/tb';
 import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -158,8 +159,18 @@ export default function LandingPage() {
 						<AiFillGithub />
 						<p className="invisible text-xs group-hover:visible">GitHub</p>
 					</a>
-					{/* <a
-						href="https://t.me/denniswan518/"
+					<a
+						href="skype:live:.cid.bb94bd4153e9b409?chat"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="Skype"
+						className="group hover:cursor-pointer hover:text-cyan-800 dark:hover:text-cyan-500"
+					>
+						<AiFillSkype />
+						<p className="invisible text-xs group-hover:visible">Skype</p>
+					</a>
+					<a
+						href="https://t.me/codeguru827/"
 						target="_blank"
 						rel="noreferrer"
 						aria-label="Telegram"
@@ -167,7 +178,7 @@ export default function LandingPage() {
 					>
 						<TbBrandTelegram />
 						<p className="invisible text-xs group-hover:visible">Telegram</p>
-					</a> */}
+					</a>
 					<a
 						href="https://wa.me/15816877831"
 						target="_blank"
@@ -177,16 +188,6 @@ export default function LandingPage() {
 					>
 						<AiOutlineWhatsApp />
 						<p className="invisible text-xs group-hover:visible">Whatsapp</p>
-					</a>
-					<a
-						href="skype:live:.cid.3592c9df0706eb6c?call"
-						target="_blank"
-						rel="noreferrer"
-						aria-label="Skype"
-						className="group hover:cursor-pointer hover:text-cyan-800 dark:hover:text-cyan-500"
-					>
-						<AiFillSkype />
-						<p className="invisible text-xs group-hover:visible">Skype</p>
 					</a>
 				</div>
 			</div>
