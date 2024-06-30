@@ -1,5 +1,4 @@
 import { AiFillGithub, AiFillSkype, AiOutlineWhatsApp } from 'react-icons/ai';
-import { TbBrandTelegram } from 'react-icons/tb';
 import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -7,9 +6,9 @@ import TextTransition, { presets } from 'react-text-transition';
 
 export default function LandingPage() {
 	const line1 =
-		'Experienced in the dynamic world of NodeJS, Python, Go, and Rust, I am a Senior Developer ready to bring your projects to life.';
+		'Experienced in the dynamic world of NodeJS, Python, Go, and R, I am a Senior Developer ready to bring your projects to life.';
 	const line1JP =
-		'NodeJS、Python（AI）、Go、Rustの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。';
+		'NodeJS、Python（AI）、Go、Rの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。';
 	const line2 =
 		'With a passion for innovation and a knack for problem-solving, I am thriving in the fast-paced world of competition with you.';
 	const line2JP =
@@ -26,14 +25,9 @@ export default function LandingPage() {
 		'Senior NodeJS Engineer',
 		'Professional Python (AI) Engineer',
 		'Enthusiastic GoLang Developer',
-		'Smart Rust Developer',
+		'Smart R Developer',
 	];
-	const titlesJP = [
-		'シニアNodeJSエンジニア',
-		'プロ Python (AI) エンジニア',
-		'情熱的なGoLang開発者',
-		'スマートRust開発者',
-	];
+	const titlesJP = ['シニアNodeJSエンジニア', 'プロ Python (AI) エンジニア', '情熱的なGoLang開発者', 'スマートR開発者'];
 	const [titleIndex, setTitleIndex] = useState(0);
 
 	useEffect(() => {
@@ -47,7 +41,7 @@ export default function LandingPage() {
 		<div className="min-h-[100dvh] w-full md:flex md:items-center md:justify-center">
 			<div className="px-10 pt-10 text-center">
 				<h1 className="py-2 text-3xl font-medium text-cyan-700 dark:text-cyan-600 sm:text-4xl md:text-5xl">
-					{theme === 'dark' ? 'Din Wang (王定)' : 'Wang Din（王定）'}
+					Dennis Wang (王定)
 				</h1>
 
 				{mounted ? (

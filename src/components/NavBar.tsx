@@ -190,7 +190,7 @@ export default function NavBar() {
 										>
 											<AiOutlineAlipay
 												title="日本語"
-												className="cursor-pointer text-lg  hover:text-cyan-600 dark:hover:text-cyan-500 sm:text-2xl"
+												className="cursor-pointer text-lg hover:text-cyan-600 dark:hover:text-cyan-500 sm:text-2xl"
 												onClick={() => setTheme('light')}
 											/>
 										</motion.div>

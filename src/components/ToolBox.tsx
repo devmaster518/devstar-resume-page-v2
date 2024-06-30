@@ -15,8 +15,10 @@ import {
 	SiTensorflow,
 	SiGraphql,
 	SiSolana,
+	SiDigitalocean,
+	SiPandas,
 } from 'react-icons/si';
-import { FaRust, FaHardHat } from 'react-icons/fa';
+import { FaHardHat, FaRProject } from 'react-icons/fa';
 import { BsGit } from 'react-icons/bs';
 import { BiLogoGoLang, BiLogoNodejs } from 'react-icons/bi';
 import { FcLinux } from 'react-icons/fc';
@@ -46,7 +48,7 @@ const languageTools: Tool[] = [
 	{
 		index: 2,
 		name: 'C++',
-		icon: <TbBrandCpp className="m-4 text-6xl text-blue-600 " />,
+		icon: <TbBrandCpp className="m-4 text-6xl text-blue-500 " />,
 	},
 	{
 		index: 3,
@@ -56,7 +58,7 @@ const languageTools: Tool[] = [
 	{
 		index: 4,
 		name: 'GoLang',
-		icon: <BiLogoGoLang className={'m-4 text-6xl text-blue-600'} />,
+		icon: <BiLogoGoLang className={'m-4 text-6xl text-blue-700'} />,
 	},
 	{
 		index: 5,
@@ -65,8 +67,8 @@ const languageTools: Tool[] = [
 	},
 	{
 		index: 6,
-		name: 'Rust',
-		icon: <FaRust className="m-4 text-6xl text-orange-600" />,
+		name: 'R',
+		icon: <FaRProject className="m-4 text-6xl text-blue-600" />,
 	},
 ];
 
@@ -93,26 +95,31 @@ const frameworkTools: Tool[] = [
 	},
 	{
 		index: 4,
+		name: 'Pandas',
+		icon: <SiPandas className={'m-4 text-6xl text-gray-300'} />,
+	},
+	{
+		index: 5,
 		name: 'TensorFlow',
 		icon: <SiTensorflow className={'m-4 text-6xl text-orange-600'} />,
 	},
 	{
-		index: 5,
+		index: 6,
 		name: 'Gin',
 		icon: <SiGin className={'m-4 text-6xl text-orange-500'} />,
 	},
 	{
-		index: 6,
+		index: 7,
 		name: 'Hardhat',
 		icon: <FaHardHat className={'m-4 text-6xl text-yellow-400'} />,
 	},
 	{
-		index: 7,
+		index: 8,
 		name: 'Alchemy',
 		icon: <SiAlchemy className={'m-4 text-6xl text-blue-600'} />,
 	},
 	{
-		index: 8,
+		index: 9,
 		name: 'Solana',
 		icon: <SiSolana className={'m-4 text-6xl text-blue-500'} />,
 	},
@@ -176,6 +183,11 @@ const otherTools = [
 		index: 5,
 		name: 'Firebase',
 		icon: <SiFirebase className={'m-4 text-6xl text-yellow-600'} />,
+	},
+	{
+		index: 6,
+		name: 'DigitalOcean',
+		icon: <SiDigitalocean className={'m-4 text-6xl text-cyan-600'} />,
 	},
 ];
 

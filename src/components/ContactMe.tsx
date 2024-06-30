@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { AiOutlineLink, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
+import { TbBrandTelegram } from 'react-icons/tb';
 import emailjs from '@emailjs/browser';
 import { FormEvent, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
@@ -14,8 +15,8 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactMe() {
-	const pdfLink = 'https://drive.google.com/file/d/1YJfoXdN7DSZfMoLnnaH-6vY9HejNc-Ta/view?usp=drive_link';
-	const pdfLinkJP = 'https://drive.google.com/file/d/13gtdx_5wtVi4yVKiWFDg7A-1_-XUojAE/view?usp=drive_link';
+	const pdfLink = 'https://drive.google.com/file/d/1prylnXhzUwD6CGiAJ5n1SV_HSRXF5GqS/view?usp=drive_link';
+	const pdfLinkJP = 'https://drive.google.com/file/d/16k08zBozqbHHXtFIWB1Y1OzQ1IuBb_Kd/view?usp=drive_link';
 
 	const { theme } = useTheme();
 	const form = useRef<HTMLFormElement | null>(null);
@@ -70,7 +71,7 @@ export default function ContactMe() {
 				<div className="flex flex-col items-center justify-around rounded-xl border-0 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
 					<Image
 						src="/profile_pic.jpg"
-						alt="Din Wang (王定)"
+						alt="Dennis Wang (王定)"
 						width={480}
 						height={480}
 						className="w-full max-w-[200px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
@@ -78,14 +79,38 @@ export default function ContactMe() {
 				</div>
 				<h2 className="pb-8 text-5xl sm:pt-0">{theme === 'dark' ? 'Get in touch' : 'コンタクト'}</h2>
 				<span className="flex items-center pb-4">
+					<AiOutlineLink className="mr-2" />
+					<Link
+						href={theme === 'dark' ? pdfLink : pdfLinkJP}
+						rel="noreferrer"
+						className="group transition duration-300"
+						target="_blank"
+					>
+						{theme === 'dark' ? 'Download Resume' : '履歴書をダウンロード'}
+						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
+					</Link>
+				</span>
+				<span className="flex items-center pb-4">
 					<AiOutlineMail className="mr-2" />
 					<Link
-						href="mailto: devking0727.wang@gmail.com"
+						href="mailto:codeguru827@outlook.com"
 						className="group transition duration-300"
 						rel="noreferrer"
 						target="_blank"
 					>
-						devking0727.wang@gmail.com
+						codeguru827@outlook.com
+						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
+					</Link>
+				</span>
+				<span className="flex items-center pb-4">
+					<TbBrandTelegram className="mr-2" />
+					<Link
+						href="https://t.me/codeguru827"
+						rel="noreferrer"
+						className="group transition duration-300"
+						target="_blank"
+					>
+						codeguru827
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
@@ -98,18 +123,6 @@ export default function ContactMe() {
 						target="_blank"
 					>
 						+15816877831
-						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
-					</Link>
-				</span>
-				<span className="flex items-center">
-					<AiOutlineLink className="mr-2" />
-					<Link
-						href={theme === 'dark' ? pdfLink : pdfLinkJP}
-						rel="noreferrer"
-						className="group transition duration-300"
-						target="_blank"
-					>
-						{theme === 'dark' ? 'Download Resume' : '履歴書をダウンロード'}
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>

@@ -5,10 +5,10 @@ import { Element } from 'react-scroll';
 
 export default function AboutMe() {
 	const detail =
-		'Experienced in the dynamic world of NodeJS, Python, Go, and Rust, I am a Senior Developer ready to bring your projects to life. With a passion for innovation and a knack for problem-solving, I am thriving in the fast-paced world of competition with you. Let us collaborate and create something extraordinary together!';
+		'Experienced in the dynamic world of NodeJS, Python, Go, and R, I am a Senior Developer ready to bring your projects to life. With a passion for innovation and a knack for problem-solving, I am thriving in the fast-paced world of competition with you. Let us collaborate and create something extraordinary together!';
 	const detailJP_1 = '初めまして。王定と申します。中国の遼寧省、瀋陽市に在住しています。';
 	const detailJP_2 =
-		'NodeJS、Python（AI）、Go、Rustの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。イノベーションへの情熱と問題解決の才能を持ち、競争の激しい世界であなたと一緒に成長していきたいと考えています。共に素晴らしいものを創り上げましょう！';
+		'NodeJS、Python（AI）、Go、Rの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。イノベーションへの情熱と問題解決の才能を持ち、競争の激しい世界であなたと一緒に成長していきたいと考えています。共に素晴らしいものを創り上げましょう！';
 	const detailJP_3 =
 		'海外（中国含む）に進出した日本の多くの企業の素晴らしいお客様と、長年の親密な提携関係を結び、ウェブサイト、モバイルアプリなどのソフトウェア開発分野で豊富な経験を持つキャリアを誇りたいと思います。';
 	const detailJP_4 = '宜しくお願い致します。';
@@ -25,7 +25,7 @@ export default function AboutMe() {
 				<div className="mx-4 flex flex-col items-center justify-around rounded-xl border-2 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
 					<Image
 						src="/greeting_pic.jpg"
-						alt="Din Wang (王定)"
+						alt="Dennis Wang (王定)"
 						width={480}
 						height={480}
 						className="mb-10 w-full max-w-[380px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
