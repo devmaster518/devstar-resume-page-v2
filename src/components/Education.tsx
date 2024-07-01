@@ -21,6 +21,10 @@ export default function Education() {
 	const [modalImg, setModalImg] = useState<string | undefined>(undefined);
 	const [showModal, setShowModal] = useState<boolean>(false);
 	const { theme } = useTheme();
+	const [mounted, setMounted] = useState(false);
+
+	//-- When mounted on client, now we can show the UI
+	useEffect(() => setMounted(true), []);
 
 	useEffect(() => {
 		const closeOnEscapeKey = (e: KeyboardEvent) => {
@@ -70,7 +74,8 @@ export default function Education() {
 			<Element name="education" className="relative" />
 			<div className="mb-48 mt-20 sm:mt-0">
 				<h3 className="mb-16 text-center text-4xl font-medium text-gray-800 transition duration-300 dark:text-white lg:mb-20 xl:mb-24">
-					{theme === 'dark' ? 'Education' : '教育'}
+					{mounted && (theme === 'dark' ? 'Education' : '教育')}
+					{!mounted && 'Loading...'}
 				</h3>
 				<div className="mx-0 grid grid-cols-1 sm:grid-cols-2 md:mx-5 lg:grid-cols-4">
 					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500 dark:border-gray-800 dark:text-white dark:hover:border-cyan-700 sm:col-span-2">
@@ -78,10 +83,13 @@ export default function Education() {
 							<div>
 								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2010-2015</p>
 								<p className="my-1 font-medium sm:text-xl">
-									{theme === 'dark' ? 'B. Science in Math & Computer Science' : '数学・コンピュータサイエンスの理学士'}
+									{mounted &&
+										(theme === 'dark'
+											? 'B. Science in Math & Computer Science'
+											: '数学・コンピュータサイエンスの理学士')}
 								</p>
 								<p className="my-1 text-sm font-medium">
-									{theme === 'dark' ? 'Dalian University of Technology' : '大连理工大学'}
+									{mounted && (theme === 'dark' ? 'Dalian University of Technology' : '大连理工大学')}
 								</p>
 								<p className="text-sm">GPA: 3.8</p>
 							</div>
@@ -90,7 +98,7 @@ export default function Education() {
 								alt="DLUT Logo"
 								width={100}
 								height={100}
-								title={theme === 'dark' ? 'Dalian University of Technology' : '大连理工大学'}
+								title="大连理工大学"
 								onClick={() => {
 									window.open('https://en.dlut.edu.cn/', '_blank');
 								}}
@@ -103,12 +111,13 @@ export default function Education() {
 							<div>
 								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2020</p>
 								<p className="my-1 text-xl font-medium">
-									{theme === 'dark'
-										? 'The Complete NodeJS Development Bootcamp 2020'
-										: '完全Node.js 開発ブートキャンプ 2020'}
+									{mounted &&
+										(theme === 'dark'
+											? 'The Complete NodeJS Development Bootcamp 2020'
+											: '完全Node.js 開発ブートキャンプ 2020')}
 								</p>
 								<p className="my-1 text-sm font-medium">
-									{theme === 'dark' ? 'Online Coding BootCamp' : 'オンラインコーディングブートキャンプ'}
+									{mounted && (theme === 'dark' ? 'Online Coding BootCamp' : 'オンラインコーディングブートキャンプ')}
 								</p>
 								{/* <p className="text-sm">Grade: 89.5% </p> */}
 							</div>
@@ -118,7 +127,7 @@ export default function Education() {
 									alt="Udemy Bootcamp Logo"
 									width={100}
 									height={100}
-									title={theme === 'dark' ? 'Online Coding BootCamp' : 'オンラインコーディングブートキャンプ'}
+									title="Online Coding BootCamp"
 									onClick={() => {
 										window.open('https://www.udemy.com/course/the-complete-nodejs-development-bootcamp/', '_blank');
 									}}
@@ -132,10 +141,10 @@ export default function Education() {
 							<div>
 								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2022</p>
 								<p className="my-1 text-xl font-medium">
-									{theme === 'dark' ? 'Web3 Solidity Bootcamp' : 'Web3 Solidity ブートキャンプ'}
+									{mounted && (theme === 'dark' ? 'Web3 Solidity Bootcamp' : 'Web3 Solidity ブートキャンプ')}
 								</p>
 								<p className="my-1 text-sm font-medium">
-									{theme === 'dark' ? 'Online BootCamp at Metana' : 'Metanaのオンライン ブートキャンプ'}
+									{mounted && (theme === 'dark' ? 'Online BootCamp at Metana' : 'Metanaのオンライン ブートキャンプ')}
 								</p>
 							</div>
 							<div className="block">
@@ -144,7 +153,7 @@ export default function Education() {
 									alt="Metana Web3 Solidity Bootcamp Logo"
 									width={100}
 									height={100}
-									title={theme === 'dark' ? 'Web3 Solidity Bootcamp' : 'Web3 Solidity ブートキャンプ'}
+									title="Web3 Solidity Bootcamp"
 									onClick={() => {
 										window.open('https://metana.io/web3-0-bootcamp/', '_blank');
 									}}
@@ -186,9 +195,11 @@ export default function Education() {
 										/>
 									</div>
 									<div className={`w-full`}>
-										<p className="my-1 text-xl font-medium">{theme === 'dark' ? diploma.name : diploma.nameJP}</p>
+										<p className="my-1 text-xl font-medium">
+											{mounted && (theme === 'dark' ? diploma.name : diploma.nameJP)}
+										</p>
 										<p className="my-1 text-sm text-orange-500">
-											{theme === 'dark' ? diploma.degree : diploma.degreeJP}
+											{mounted && (theme === 'dark' ? diploma.degree : diploma.degreeJP)}
 										</p>
 									</div>
 								</Fade>

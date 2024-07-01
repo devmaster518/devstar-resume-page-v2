@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { animateScroll, Link } from 'react-scroll';
 
-function navLinks(theme: any) {
+function navLinks(theme: any, mounted: boolean) {
 	return (
 		<>
 			<li className="scroll-link mt-4 sm:my-0 sm:mr-4">
@@ -22,7 +22,7 @@ function navLinks(theme: any) {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					{theme === 'dark' ? 'About Me' : '私について'}
+					{mounted && (theme === 'dark' ? 'About Me' : '私について')}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>
@@ -41,7 +41,7 @@ function navLinks(theme: any) {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					{theme === 'dark' ? 'Education' : '教育'}
+					{mounted && (theme === 'dark' ? 'Education' : '教育')}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>
@@ -60,7 +60,7 @@ function navLinks(theme: any) {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					{theme === 'dark' ? 'Expertise' : '専門知識'}
+					{mounted && (theme === 'dark' ? 'Expertise' : '専門知識')}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>
@@ -79,7 +79,7 @@ function navLinks(theme: any) {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					{theme === 'dark' ? 'Projects' : 'プロジェクト'}
+					{mounted && (theme === 'dark' ? 'Projects' : 'プロジェクト')}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>
@@ -95,7 +95,7 @@ function navLinks(theme: any) {
 					}}
 					className="group w-full transition duration-300 hover:cursor-pointer"
 				>
-					{theme === 'dark' ? 'Contact' : 'コンタクト'}
+					{mounted && (theme === 'dark' ? 'Contact' : 'コンタクト')}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</button>
 			</li>
@@ -107,10 +107,10 @@ export default function NavBar() {
 	const { theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
-	// When mounted on client, now we can show the UI
+	//-- When mounted on client, now we can show the UI
 	useEffect(() => setMounted(true), []);
 
-	// decrease navbar height on scroll
+	//-- decrease navbar height on scroll
 	useEffect(() => {
 		const handleScroll = () => {
 			const navbar = document.querySelector('nav');
@@ -153,7 +153,8 @@ export default function NavBar() {
 						onClick={() => animateScroll.scrollToTop()}
 						className="group text-lg transition duration-300 sm:text-xl"
 					>
-						{theme === 'dark' ? "Wang's CV site" : '王定の個人サイト'}
+						{mounted && (theme === 'dark' ? 'Dennis CV site' : 'Dennisの個人サイト')}
+						{!mounted && 'Loading...'}
 						<span className="block h-0.5 max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</button>
 					<div className="flex">
@@ -173,10 +174,10 @@ export default function NavBar() {
 								}
 							}}
 						/>
-						<ul className="hidden flex-col items-center text-base md:flex md:flex-row">{navLinks(theme)}</ul>
+						<ul className="hidden flex-col items-center text-base md:flex md:flex-row">{navLinks(theme, mounted)}</ul>
 
 						{
-							// Only show dark mode toggle if mounted and can be toggled
+							//-- Only show dark mode toggle if mounted and can be toggled
 							mounted && (
 								<button className={`ml-2`}>
 									{theme === 'dark' ? (
@@ -217,7 +218,7 @@ export default function NavBar() {
 				</div>
 				<div className={`flex w-full items-center justify-center`}>
 					<ul id="toggle-navbar" className="hidden w-fit space-y-2 text-center text-sm">
-						{navLinks(theme)}
+						{navLinks(theme, mounted)}
 					</ul>
 				</div>
 			</nav>

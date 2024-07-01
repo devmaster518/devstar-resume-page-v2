@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { AiOutlineLink, AiOutlineMail, AiOutlineWhatsApp } from 'react-icons/ai';
 import { TbBrandTelegram } from 'react-icons/tb';
 import emailjs from '@emailjs/browser';
-import { FormEvent, useRef, useState } from 'react';
+import { FormEvent, useRef, useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 
@@ -19,9 +19,13 @@ export default function ContactMe() {
 	const pdfLinkJP = 'https://drive.google.com/file/d/16k08zBozqbHHXtFIWB1Y1OzQ1IuBb_Kd/view?usp=drive_link';
 
 	const { theme } = useTheme();
+	const [mounted, setMounted] = useState(false);
 	const form = useRef<HTMLFormElement | null>(null);
 	const [disable, setDisable] = useState<boolean>(false);
 	const [status, setStatus] = useState<string>('Submit');
+
+	//-- When mounted on client, now we can show the UI
+	useEffect(() => setMounted(true), []);
 
 	const submitForm = (e: FormEvent) => {
 		e.preventDefault();
@@ -77,7 +81,10 @@ export default function ContactMe() {
 						className="w-full max-w-[200px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
 					/>
 				</div>
-				<h2 className="pb-8 text-5xl sm:pt-0">{theme === 'dark' ? 'Get in touch' : 'コンタクト'}</h2>
+				<h2 className="pb-8 text-5xl sm:pt-0">
+					{mounted && (theme === 'dark' ? 'Get in touch' : 'コンタクト')}
+					{!mounted && 'Loading...'}
+				</h2>
 				<span className="flex items-center pb-4">
 					<AiOutlineLink className="mr-2" />
 					<Link
@@ -86,7 +93,7 @@ export default function ContactMe() {
 						className="group transition duration-300"
 						target="_blank"
 					>
-						{theme === 'dark' ? 'Download Resume' : '履歴書をダウンロード'}
+						{mounted && (theme === 'dark' ? 'Download Resume' : '履歴書をダウンロード')}
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
@@ -135,21 +142,21 @@ export default function ContactMe() {
 			>
 				<input
 					type="text"
-					placeholder={theme === 'dark' ? 'Your Name' : 'あなたのお名前は'}
+					placeholder={mounted ? (theme === 'dark' ? 'Your Name' : 'あなたのお名前は') : ''}
 					name="from_name"
 					required
 					className="mb-2 h-10 max-w-xl rounded-lg border-2 bg-white p-5 text-sm hover:border-cyan-500 dark:border-transparent dark:bg-gray-900 dark:hover:border-gray-700"
 				/>
 				<input
 					type="email"
-					placeholder={theme === 'dark' ? 'Your Email' : 'あなたのメールは'}
+					placeholder={mounted ? (theme === 'dark' ? 'Your Email' : 'あなたのメールは') : ''}
 					name="from_email"
 					required
 					className="mb-2 h-10 max-w-xl rounded-lg border-2 bg-white p-5 text-sm hover:border-cyan-500 dark:border-transparent dark:bg-gray-900 dark:hover:border-gray-700"
 				/>
 				<textarea
 					rows={5}
-					placeholder={theme === 'dark' ? 'Your Message' : 'メッセージを入力してください'}
+					placeholder={mounted ? (theme === 'dark' ? 'Your Message' : 'メッセージを入力してください') : ''}
 					name="message"
 					minLength={10}
 					required

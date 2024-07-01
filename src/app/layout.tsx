@@ -1,8 +1,9 @@
-import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Geologica } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import React from 'react';
+
+import './globals.css';
 
 const geologica = Geologica({
 	subsets: ['latin'],
@@ -11,9 +12,9 @@ const geologica = Geologica({
 });
 
 export const metadata = {
-	title: 'Dennis Wang | Senior Developer',
+	title: 'Dennis W. | Senior Developer',
 	description:
-		"Showcasing the projects, skills, and achievements of Dennis Wang, a senior freelance developer from China. Explore Dennis Wang's expertise in programming, problem-solving, and technical development through this carefully curated portfolio.",
+		"Showcasing the projects, skills, and achievements of Dennis W., a senior freelance developer from Shenyang. Explore Dennis W's expertise in programming, problem-solving, and technical development through this carefully curated portfolio.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

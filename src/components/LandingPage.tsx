@@ -42,7 +42,7 @@ export default function LandingPage() {
 		<div className="min-h-[100dvh] w-full md:flex md:items-center md:justify-center">
 			<div className="px-10 pt-10 text-center">
 				<h1 className="py-2 text-3xl font-medium text-cyan-700 dark:text-cyan-600 sm:text-4xl md:text-5xl">
-					Dennis Wang (王定)
+					Dennis W.
 				</h1>
 
 				{mounted ? (
@@ -52,9 +52,7 @@ export default function LandingPage() {
 						</p>
 					</TextTransition>
 				) : (
-					<p className="py-2 text-xl font-medium sm:text-2xl">
-						{theme === 'dark' ? titles[titleIndex % titles.length] : titlesJP[titleIndex % titles.length]}
-					</p>
+					<p className="py-2 text-xl font-medium sm:text-2xl">{titles[titleIndex % titles.length]}</p>
 				)}
 
 				{mounted ? (

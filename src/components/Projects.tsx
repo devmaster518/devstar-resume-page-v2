@@ -24,6 +24,10 @@ export default function Projects() {
 	const [modalImg, setModalImg] = useState<string | undefined>(undefined);
 	const [showModal, setShowModal] = useState<boolean>(false);
 	const { theme } = useTheme();
+	const [mounted, setMounted] = useState(false);
+
+	//-- When mounted on client, now we can show the UI
+	useEffect(() => setMounted(true), []);
 
 	useEffect(() => {
 		const closeOnEscapeKey = (e: KeyboardEvent) => {
@@ -155,7 +159,8 @@ export default function Projects() {
 			<Element name="projects" className="relative" />
 			<div className="mb-48">
 				<h2 className="mb-16 text-center text-4xl font-medium text-gray-800 transition duration-300 dark:text-white lg:mb-20 xl:mb-24">
-					{theme === 'dark' ? 'Projects' : 'プロジェクト'}
+					{mounted && (theme === 'dark' ? 'Projects' : 'プロジェクト')}
+					{!mounted && 'Loading...'}
 				</h2>
 				<div className="mx-0 grid grid-cols-1 grid-rows-2 sm:grid-cols-2 md:mx-4 lg:grid-cols-3">
 					{projects.map((project) => {
@@ -188,7 +193,7 @@ export default function Projects() {
 									</div>
 									<div className={`w-full`}>
 										<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">
-											{theme === 'dark' ? project.description : project.descriptionJP}
+											{mounted && (theme === 'dark' ? project.description : project.descriptionJP)}
 										</p>
 										<p className="my-1 text-xl font-medium">{project.name}</p>
 										<p className="my-1 text-sm text-orange-500">{project.tech}</p>
@@ -208,21 +213,13 @@ export default function Projects() {
 															}
 												}
 											>
-												{project.demo_link === '#' ? '' : theme === 'dark' ? 'Visit' : '訪問する'}
+												{project.demo_link === '#' ? '' : 'Visit'}
 												<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 											</Link>
 											<Link
 												href={project.github_link}
 												rel="noreferrer"
-												title={
-													project.github_link.includes('github.com')
-														? theme === 'dark'
-															? 'View GitHub Repo'
-															: 'GitHub リポジトリにアクセス'
-														: theme === 'dark'
-															? 'Visit Website'
-															: 'サイトにアクセス'
-												}
+												title={project.github_link.includes('github.com') ? 'GitHub' : 'Website'}
 												target="_blank"
 											>
 												{project.github_link.includes('github.com') ? (
