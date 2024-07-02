@@ -15,8 +15,8 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactMe() {
-	const pdfLink = 'https://drive.google.com/file/d/1prylnXhzUwD6CGiAJ5n1SV_HSRXF5GqS/view?usp=drive_link';
-	const pdfLinkJP = 'https://drive.google.com/file/d/16k08zBozqbHHXtFIWB1Y1OzQ1IuBb_Kd/view?usp=drive_link';
+	const pdfLink = 'https://drive.google.com/file/d/1ffoN5jZbjet7VqXDftBNhNKKHKJFjoFi/view?usp=drive_link';
+	const pdfLinkJP = 'https://drive.google.com/file/d/1L4SvBiOhH-JyEJ6AdcbwznvH1_0k4nXh/view?usp=drive_link';
 
 	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
@@ -124,12 +124,12 @@ export default function ContactMe() {
 				<span className="flex items-center pb-4">
 					<AiOutlineWhatsApp className="mr-2" />
 					<Link
-						href="https://wa.me/15816877831"
+						href="https://wa.me/33780871076"
 						rel="noreferrer"
 						className="group transition duration-300"
 						target="_blank"
 					>
-						+15816877831
+						+33780871076
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>

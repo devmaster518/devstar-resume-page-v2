@@ -8,6 +8,7 @@ DevStar's Personal Resume Website v2 (built with Next.js `14.1.4`)
 
 ```yaml
 node.js: ^18.17.0
+yarn: 1.22.22
 ```
 
 ```bash
@@ -15,7 +16,7 @@ node.js: ^18.17.0
 $ yarn install
 
 # start dev server
-$ yarn run dev
+$ yarn dev
 ```
 
 &copy; 2024 @devmaster518

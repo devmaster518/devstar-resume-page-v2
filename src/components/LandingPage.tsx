@@ -178,7 +178,7 @@ export default function LandingPage() {
 						<p className="invisible text-xs group-hover:visible">Telegram</p>
 					</a>
 					<a
-						href="https://wa.me/15816877831"
+						href="https://wa.me/33780871076"
 						target="_blank"
 						rel="noreferrer"
 						aria-label="Whatsapp"
