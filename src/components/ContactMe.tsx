@@ -15,8 +15,8 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactMe() {
-	const pdfLink = 'https://drive.google.com/file/d/1ffoN5jZbjet7VqXDftBNhNKKHKJFjoFi/view?usp=drive_link';
-	const pdfLinkJP = 'https://drive.google.com/file/d/1L4SvBiOhH-JyEJ6AdcbwznvH1_0k4nXh/view?usp=drive_link';
+	const pdfLink = 'https://drive.google.com/file/d/1ANVk1SfIz4ShoHCogi3vd-g8_EFplVem/view?usp=drive_link';
+	const pdfLinkJP = 'https://drive.google.com/file/d/1cnar8S7Ub40Tz03l8sBUf-2PItCx2r50/view?usp=drive_link';
 
 	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
@@ -100,12 +100,12 @@ export default function ContactMe() {
 				<span className="flex items-center pb-4">
 					<TbBrandGoogleMaps className="mr-2" />
 					<Link
-						href="https://google.com?search=Calgary,Canada"
+						href="https://www.google.com/maps?q=Calgary,+Alberta+T2A+0A1,+CA"
 						className="group transition duration-300"
 						rel="noreferrer"
 						target="_blank"
 					>
-						Calgary, Alberta, Canada, T2A 0A1
+						Calgary, Alberta T2A 0A1, Canada
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>
