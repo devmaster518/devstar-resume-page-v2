@@ -165,6 +165,19 @@ export default function Projects() {
 			hover_gif_dark: '/project_gifs/dark/pyscraping.jpg',
 			hover_gif_light: '/project_gifs/light/pyscraping.jpg',
 		},
+		{
+			index: 9,
+			image: '/project_thumbnails/light/420portal.png',
+			image_dark: '/project_thumbnails/dark/420portal.png',
+			description: 'Mobile Application',
+			descriptionJP: 'Mobileアプリ',
+			name: '420 Portal App',
+			tech: 'Ionic, iOS, Android, Angular, Laravel, Nuxt',
+			demo_link: '#',
+			github_link: 'https://github.com/devmaster518/420portal-app-android',
+			hover_gif_dark: '/project_gifs/dark/420portal.png',
+			hover_gif_light: '/project_gifs/light/420portal.png',
+		},
 	];
 
 	return (
