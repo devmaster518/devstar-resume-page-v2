@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { AiOutlineLink, AiOutlineMail, AiOutlineWhatsApp, AiOutlineSkype } from 'react-icons/ai';
-import { TbBrandTelegram } from 'react-icons/tb';
-import emailjs from '@emailjs/browser';
+import { AiOutlineLink, AiOutlineWhatsApp, AiOutlineSkype } from 'react-icons/ai';
 import { FormEvent, useRef, useState, useEffect } from 'react';
+import { TbBrandTelegram, TbBrandGoogleMaps } from 'react-icons/tb';
+import emailjs from '@emailjs/browser';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 
@@ -98,26 +98,14 @@ export default function ContactMe() {
 					</Link>
 				</span>
 				<span className="flex items-center pb-4">
-					<AiOutlineMail className="mr-2" />
+					<TbBrandGoogleMaps className="mr-2" />
 					<Link
-						href="mailto:christendennis779@gmail.com"
+						href="https://google.com?search=Calgary,Canada"
 						className="group transition duration-300"
 						rel="noreferrer"
 						target="_blank"
 					>
-						christendennis779@gmail.com
-						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
-					</Link>
-				</span>
-				<span className="flex items-center pb-4">
-					<AiOutlineMail className="mr-2" />
-					<Link
-						href="mailto:codeguru827@outlook.com"
-						className="group transition duration-300"
-						rel="noreferrer"
-						target="_blank"
-					>
-						codeguru827@outlook.com
+						Calgary, Alberta, Canada, T2A 0A1
 						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</Link>
 				</span>

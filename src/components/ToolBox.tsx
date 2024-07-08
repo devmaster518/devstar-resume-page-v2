@@ -8,7 +8,7 @@ import {
 	SiMysql,
 	SiSolidity,
 	SiGin,
-	SiAlchemy,
+	SiPytorch,
 	SiRedis,
 	SiAmazonaws,
 	SiMicrosoftazure,
@@ -105,18 +105,18 @@ const frameworkTools: Tool[] = [
 	},
 	{
 		index: 6,
+		name: 'PyTorch',
+		icon: <SiPytorch className={'m-4 text-6xl text-red-600'} />,
+	},
+	{
+		index: 7,
 		name: 'Gin',
 		icon: <SiGin className={'m-4 text-6xl text-orange-500'} />,
 	},
 	{
-		index: 7,
+		index: 8,
 		name: 'Hardhat',
 		icon: <FaHardHat className={'m-4 text-6xl text-yellow-400'} />,
-	},
-	{
-		index: 8,
-		name: 'Alchemy',
-		icon: <SiAlchemy className={'m-4 text-6xl text-blue-600'} />,
 	},
 	{
 		index: 9,
