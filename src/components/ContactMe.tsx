@@ -91,12 +91,12 @@ export default function ContactMe() {
 					{mounted &&
 						(theme === 'dark' ? (
 							<Link href={pdfLink} rel="noreferrer" className="group transition duration-300" target="_blank">
-								'Download Resume'
+								Download Resume
 								<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 							</Link>
 						) : (
 							<Link href={pdfLinkJP} rel="noreferrer" className="group transition duration-300" target="_blank">
-								'履歴書をダウンロード'
+								履歴書をダウンロード
 								<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 							</Link>
 						))}
