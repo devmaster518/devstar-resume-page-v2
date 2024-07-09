@@ -77,7 +77,8 @@ export default function ContactMe() {
 						src="/profile_pic.jpg"
 						alt="Dennis Wang (王定)"
 						width={480}
-						height={480}
+						height={0}
+						style={{ height: 'auto' }}
 						className="w-full max-w-[200px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
 					/>
 				</div>
@@ -87,15 +88,18 @@ export default function ContactMe() {
 				</h2>
 				<span className="flex items-center pb-4">
 					<AiOutlineLink className="mr-2" />
-					<Link
-						href={theme === 'dark' ? pdfLink : pdfLinkJP}
-						rel="noreferrer"
-						className="group transition duration-300"
-						target="_blank"
-					>
-						{mounted && (theme === 'dark' ? 'Download Resume' : '履歴書をダウンロード')}
-						<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
-					</Link>
+					{mounted &&
+						(theme === 'dark' ? (
+							<Link href={pdfLink} rel="noreferrer" className="group transition duration-300" target="_blank">
+								'Download Resume'
+								<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
+							</Link>
+						) : (
+							<Link href={pdfLinkJP} rel="noreferrer" className="group transition duration-300" target="_blank">
+								'履歴書をダウンロード'
+								<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
+							</Link>
+						))}
 				</span>
 				<span className="flex items-center pb-4">
 					<TbBrandGoogleMaps className="mr-2" />

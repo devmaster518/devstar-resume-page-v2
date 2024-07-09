@@ -201,7 +201,8 @@ export default function Projects() {
 											src={theme === 'light' ? project.image : project.image_dark}
 											alt={project.name}
 											width={300}
-											height={224}
+											height={0}
+											style={{ height: 'auto' }}
 											title="Click to enlarge"
 											onClick={() => {
 												setModalImg(theme === 'dark' ? project.image_dark : project.image);
@@ -212,7 +213,8 @@ export default function Projects() {
 											src={theme === 'light' ? project.hover_gif_light : project.hover_gif_dark}
 											alt={project.name}
 											width={300}
-											height={224}
+											height={0}
+											style={{ height: 'auto' }}
 											unoptimized={true}
 											className={`mb-4 h-auto max-h-56 w-full rounded-lg object-contain`}
 										/>

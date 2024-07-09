@@ -97,7 +97,8 @@ export default function Education() {
 								src="/DLUT_logo.png"
 								alt="DLUT Logo"
 								width={100}
-								height={100}
+								height={0}
+								style={{ height: 'auto' }}
 								title="大连理工大学"
 								onClick={() => {
 									window.open('https://en.dlut.edu.cn/', '_blank');
@@ -126,7 +127,8 @@ export default function Education() {
 									src="/udemy.png"
 									alt="Udemy Bootcamp Logo"
 									width={100}
-									height={100}
+									height={0}
+									style={{ height: 'auto' }}
 									title="Online Coding BootCamp"
 									onClick={() => {
 										window.open('https://www.udemy.com/course/the-complete-nodejs-development-bootcamp/', '_blank');
@@ -152,7 +154,8 @@ export default function Education() {
 									src="/solidity-bootcamp.png"
 									alt="Metana Web3 Solidity Bootcamp Logo"
 									width={100}
-									height={100}
+									height={0}
+									style={{ height: 'auto' }}
 									title="Web3 Solidity Bootcamp"
 									onClick={() => {
 										window.open('https://metana.io/web3-0-bootcamp/', '_blank');
@@ -178,7 +181,8 @@ export default function Education() {
 											src={theme === 'light' ? diploma.image : diploma.image_dark}
 											alt={diploma.name}
 											width={300}
-											height={224}
+											height={0}
+											style={{ height: 'auto' }}
 											title="Click to enlarge"
 											onClick={() => {
 												setModalImg(theme === 'dark' ? diploma.image_dark : diploma.image);
@@ -189,7 +193,8 @@ export default function Education() {
 											src={theme === 'light' ? diploma.hover_gif_light : diploma.hover_gif_dark}
 											alt={diploma.name}
 											width={300}
-											height={224}
+											height={0}
+											style={{ height: 'auto' }}
 											unoptimized={true}
 											className={`mb-4 h-auto max-h-56 w-full rounded-lg object-contain`}
 										/>
