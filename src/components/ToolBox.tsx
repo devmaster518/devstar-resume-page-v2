@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TbBrandCpp, TbBrandNextjs, TbBrandReact } from 'react-icons/tb';
+import { TbBrandCpp, TbBrandNextjs, TbBrandReact, TbBrandAngular } from 'react-icons/tb';
 import { DiJava, DiMongodb, DiPostgresql, DiPython } from 'react-icons/di';
 import {
 	SiDjango,
@@ -17,6 +17,10 @@ import {
 	SiSolana,
 	SiDigitalocean,
 	SiPandas,
+	SiNestjs,
+	SiSqlite,
+	SiMicrosoftteams,
+	SiJirasoftware,
 } from 'react-icons/si';
 import { FaHardHat, FaRProject } from 'react-icons/fa';
 import { BsGit } from 'react-icons/bs';
@@ -85,41 +89,51 @@ const frameworkTools: Tool[] = [
 	},
 	{
 		index: 2,
+		name: 'Angular',
+		icon: <TbBrandAngular className={'m-4 text-6xl text-pink-600'} />,
+	},
+	{
+		index: 3,
 		name: 'Express.js',
 		icon: <SiExpress className={'m-4 text-6xl text-white'} />,
 	},
 	{
-		index: 3,
+		index: 4,
+		name: 'NestJS',
+		icon: <SiNestjs className={'m-4 text-6xl text-red-500'} />,
+	},
+	{
+		index: 5,
 		name: 'Django',
 		icon: <SiDjango className={'m-4 text-6xl text-green-800'} />,
 	},
 	{
-		index: 4,
+		index: 6,
 		name: 'Pandas',
 		icon: <SiPandas className={'m-4 text-6xl text-gray-300'} />,
 	},
 	{
-		index: 5,
+		index: 7,
 		name: 'TensorFlow',
 		icon: <SiTensorflow className={'m-4 text-6xl text-orange-600'} />,
 	},
 	{
-		index: 6,
+		index: 8,
 		name: 'PyTorch',
 		icon: <SiPytorch className={'m-4 text-6xl text-red-600'} />,
 	},
 	{
-		index: 7,
+		index: 9,
 		name: 'Gin',
 		icon: <SiGin className={'m-4 text-6xl text-orange-500'} />,
 	},
 	{
-		index: 8,
+		index: 10,
 		name: 'Hardhat',
 		icon: <FaHardHat className={'m-4 text-6xl text-yellow-400'} />,
 	},
 	{
-		index: 9,
+		index: 11,
 		name: 'Solana',
 		icon: <SiSolana className={'m-4 text-6xl text-blue-500'} />,
 	},
@@ -150,6 +164,11 @@ const databaseTools: Tool[] = [
 		index: 4,
 		name: 'GraphQL',
 		icon: <SiGraphql className={'m-4 text-6xl text-pink-600'} />,
+	},
+	{
+		index: 5,
+		name: 'SQLite',
+		icon: <SiSqlite className={'m-4 text-6xl text-blue-500'} />,
 	},
 ];
 
@@ -188,6 +207,16 @@ const otherTools = [
 		index: 6,
 		name: 'DigitalOcean',
 		icon: <SiDigitalocean className={'m-4 text-6xl text-cyan-600'} />,
+	},
+	{
+		index: 7,
+		name: 'MS Teams',
+		icon: <SiMicrosoftteams className={'m-4 text-6xl text-purple-600'} />,
+	},
+	{
+		index: 8,
+		name: 'Atlassian Jira',
+		icon: <SiJirasoftware className={'m-4 text-6xl text-blue-500'} />,
 	},
 ];
 
