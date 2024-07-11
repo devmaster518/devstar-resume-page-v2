@@ -15,8 +15,8 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactMe() {
-	const pdfLink = 'https://drive.google.com/file/d/1ANVk1SfIz4ShoHCogi3vd-g8_EFplVem/view?usp=drive_link';
-	const pdfLinkJP = 'https://drive.google.com/file/d/1cnar8S7Ub40Tz03l8sBUf-2PItCx2r50/view?usp=drive_link';
+	const pdfLink = 'https://drive.google.com/file/d/1b-J-RIo7uwq5E3NVC2QHB2VjN3YT7tTB/view?usp=drive_link';
+	const pdfLinkJP = 'https://drive.google.com/file/d/1Ysne0Cjx_DxwYSO7jIMg7jKaen1SmjZi/view?usp=drive_link';
 
 	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
