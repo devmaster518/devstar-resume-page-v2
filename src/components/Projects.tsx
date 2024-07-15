@@ -178,6 +178,19 @@ export default function Projects() {
 			hover_gif_dark: '/project_gifs/dark/420portal.png',
 			hover_gif_light: '/project_gifs/light/420portal.png',
 		},
+		{
+			index: 10,
+			image: '/project_thumbnails/light/runners.jpg',
+			image_dark: '/project_thumbnails/dark/runners.jpg',
+			description: 'Web Application',
+			descriptionJP: 'Webアプリケーション',
+			name: 'Runners School Italia',
+			tech: 'Angular, WordPress, TypeScript, Cloudflare',
+			demo_link: '#',
+			github_link: 'https://www.runnerschoolitalia.com/',
+			hover_gif_dark: '/project_gifs/dark/runners.jpg',
+			hover_gif_light: '/project_gifs/light/runners.jpg',
+		},
 	];
 
 	return (
