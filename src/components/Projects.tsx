@@ -191,6 +191,19 @@ export default function Projects() {
 			hover_gif_dark: '/project_gifs/dark/runners.jpg',
 			hover_gif_light: '/project_gifs/light/runners.jpg',
 		},
+		{
+			index: 11,
+			image: '/project_thumbnails/light/stakoneau.png',
+			image_dark: '/project_thumbnails/dark/stakoneau.png',
+			description: 'Web & Mobile Application',
+			descriptionJP: 'Web・Mobileアプリ',
+			name: 'Empower Your Business with StakOne Solutions',
+			tech: 'Angular, TypeScript, Apollo, GraphQL, Cloudflare, reCAPTCHA',
+			demo_link: '#',
+			github_link: 'https://stakone.com.au/',
+			hover_gif_dark: '/project_gifs/dark/stakoneau.png',
+			hover_gif_light: '/project_gifs/light/stakoneau.png',
+		},
 	];
 
 	return (
