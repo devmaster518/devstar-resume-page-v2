@@ -5,8 +5,9 @@ import { useEffect, useState } from 'react';
 import { Element } from 'react-scroll';
 
 export default function AboutMe() {
-	const detail =
-		'Experienced in the dynamic world of NodeJS, Go, Pandas, and R, I am a Senior Developer ready to bring your projects to life. With a passion for innovation and a knack for problem-solving, I am thriving in the fast-paced world of competition with you. Let us collaborate and create something extraordinary together!';
+	const detail1 =
+		'Experienced in the dynamic world of NodeJS, Go, Pandas, and R, I am a Senior Developer ready to bring your projects to life. With a passion for innovation and a knack for problem-solving, I am thriving in the fast-paced world of competition with you.';
+	const detail2 = 'Let us collaborate and create something extraordinary together!';
 	const detailJP_1 = '初めまして。王定と申します。CanadaのCalgary市に在住しています。';
 	const detailJP_2 =
 		'NodeJS、Go、Pandas、Rの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。イノベーションへの情熱と問題解決の才能を持ち、競争の激しい世界であなたと一緒に成長していきたいと考えています。共に素晴らしいものを創り上げましょう！';
@@ -40,7 +41,11 @@ export default function AboutMe() {
 					<p className="flex w-full max-w-2xl items-center text-center text-base md:mb-0 md:ml-10 md:text-lg">
 						{mounted &&
 							(theme === 'dark' ? (
-								detail
+								<>
+									{detail1}
+									<br />
+									{detail2}
+								</>
 							) : (
 								<>
 									{detailJP_1}
