@@ -1,5 +1,6 @@
 'use client';
-import { AiOutlineMenu, AiOutlineAlipay, AiOutlineFontColors } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineFontColors } from 'react-icons/ai';
+import { LuJapaneseYen } from "react-icons/lu";
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -189,7 +190,7 @@ export default function NavBar() {
 												borderRadius: '100%',
 											}}
 										>
-											<AiOutlineAlipay
+											<LuJapaneseYen
 												title="日本語"
 												className="cursor-pointer text-lg hover:text-cyan-600 dark:hover:text-cyan-500 sm:text-2xl"
 												onClick={() => setTheme('light')}

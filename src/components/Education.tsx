@@ -67,6 +67,17 @@ export default function Education() {
 			hover_gif_dark: '/project_gifs/dark/udemy.jpg',
 			hover_gif_light: '/project_gifs/light/udemy.jpg',
 		},
+		{
+			index: 2,
+			image: '/project_thumbnails/light/denndriving.jpg',
+			image_dark: '/project_thumbnails/dark/denndriving.jpg',
+			name: 'Driving in Calgary',
+			nameJP: 'カルガリーでの運転',
+			degree: 'No pains, no gains.',
+			degreeJP: '苦労なくして得るものなし。',
+			hover_gif_dark: '/project_gifs/dark/denndriving.jpg',
+			hover_gif_light: '/project_gifs/light/denndriving.jpg',
+		},
 	];
 
 	return (
