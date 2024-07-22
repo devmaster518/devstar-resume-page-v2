@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { TbBrandCpp, TbBrandNextjs, TbBrandReact, TbBrandReactNative, TbBrandAngular } from 'react-icons/tb';
-import { DiJava, DiMongodb, DiPostgresql, DiPython, DiIonic } from 'react-icons/di';
+import {
+	TbBrandCpp,
+	TbBrandNextjs,
+	TbBrandReact,
+	TbBrandReactNative,
+	TbBrandAngular,
+	TbBrandPhp,
+} from 'react-icons/tb';
+import { DiJava, DiMongodb, DiPostgresql, DiPython, DiIonic, DiLaravel } from 'react-icons/di';
 import {
 	SiDjango,
 	SiExpress,
@@ -62,16 +69,21 @@ const languageTools: Tool[] = [
 	},
 	{
 		index: 4,
+		name: 'PHP',
+		icon: <TbBrandPhp className={'m-4 text-6xl text-purple-500'} />,
+	},
+	{
+		index: 5,
 		name: 'C++',
 		icon: <TbBrandCpp className="m-4 text-6xl text-blue-500 " />,
 	},
 	{
-		index: 5,
+		index: 6,
 		name: 'Solidity',
 		icon: <SiSolidity className="m-4 text-6xl text-violet-600" />,
 	},
 	{
-		index: 6,
+		index: 7,
 		name: 'R',
 		icon: <FaRProject className="m-4 text-6xl text-blue-600" />,
 	},
@@ -130,16 +142,21 @@ const frameworkTools: Tool[] = [
 	},
 	{
 		index: 10,
+		name: 'Laravel',
+		icon: <DiLaravel className={'m-4 text-6xl text-red-600'} />,
+	},
+	{
+		index: 11,
 		name: 'Gin',
 		icon: <SiGin className={'m-4 text-6xl text-orange-500'} />,
 	},
 	{
-		index: 11,
+		index: 12,
 		name: 'Ethereum',
 		icon: <SiEthereum className={'m-4 text-6xl text-gray-500'} />,
 	},
 	{
-		index: 12,
+		index: 13,
 		name: 'Hardhat',
 		icon: <FaHardHat className={'m-4 text-6xl text-yellow-400'} />,
 	},

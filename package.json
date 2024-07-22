@@ -1,6 +1,6 @@
 {
 	"name": "devstar-resume-page-v2",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"description": "Personal Resume Website src built with Next.js + TailwindCSS",
 	"private": true,
 	"scripts": {

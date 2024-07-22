@@ -15,7 +15,8 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactMe() {
-	const pdfLink = 'https://drive.google.com/file/d/1b-J-RIo7uwq5E3NVC2QHB2VjN3YT7tTB/view?usp=drive_link';
+	const pdfLink =
+		'https://docs.google.com/document/d/1qmlWFQvxh7iSg71ZF5clbCY8D2i576Dm/edit?usp=drive_link&ouid=108510853676302554797&rtpof=true&sd=true';
 	const pdfLinkJP = 'https://drive.google.com/file/d/1Ysne0Cjx_DxwYSO7jIMg7jKaen1SmjZi/view?usp=drive_link';
 
 	const { theme } = useTheme();
@@ -91,7 +92,7 @@ export default function ContactMe() {
 					{mounted &&
 						(theme === 'dark' ? (
 							<Link href={pdfLink} rel="noreferrer" className="group transition duration-300" target="_blank">
-								Download Resume
+								Resume
 								<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 							</Link>
 						) : (
