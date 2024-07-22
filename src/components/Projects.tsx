@@ -256,6 +256,19 @@ export default function Projects() {
 			hover_gif_dark: '/project_gifs/dark/tmobile.png',
 			hover_gif_light: '/project_gifs/light/tmobile.png',
 		},
+		{
+			index: 16,
+			image: '/project_thumbnails/light/wyscout.png',
+			image_dark: '/project_thumbnails/dark/wyscout.png',
+			description: 'Web Scraping',
+			descriptionJP: 'Webスクレイピング',
+			name: 'Python scraper using Selenium for wyscout',
+			tech: 'Python, Selenium, Scrapy, Xlsx',
+			demo_link: '#',
+			github_link: 'https://github.com/devmaster518/wyscout-scraper',
+			hover_gif_dark: '/project_gifs/dark/wyscout.png',
+			hover_gif_light: '/project_gifs/light/wyscout.png',
+		},
 	];
 
 	return (
