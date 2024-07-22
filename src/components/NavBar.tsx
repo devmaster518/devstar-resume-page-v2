@@ -1,6 +1,6 @@
 'use client';
 import { AiOutlineMenu, AiOutlineFontColors } from 'react-icons/ai';
-import { LuJapaneseYen } from "react-icons/lu";
+import { LuJapaneseYen } from 'react-icons/lu';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -154,7 +154,7 @@ export default function NavBar() {
 						onClick={() => animateScroll.scrollToTop()}
 						className="group text-lg transition duration-300 sm:text-xl"
 					>
-						{mounted && (theme === 'dark' ? 'Dennis CV Page' : 'Dennisの個人サイト')}
+						{mounted && (theme === 'dark' ? 'Dennis W.' : 'Dennisの個人サイト')}
 						{!mounted && 'Loading...'}
 						<span className="block h-0.5 max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 					</button>

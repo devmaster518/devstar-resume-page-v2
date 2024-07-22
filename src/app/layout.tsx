@@ -12,9 +12,9 @@ const geologica = Geologica({
 });
 
 export const metadata = {
-	title: 'Dennis W. | Solution Provider',
+	title: 'Dennis Wang | Solution Provider',
 	description:
-		"Showcasing the projects, skills, and achievements of Dennis W. Guru, a senior freelance developer from Calgary, Canada. Explore Dennis W's expertise in programming, problem-solving, and technical development through this carefully curated portfolio.",
+		"Showcasing the projects, skills, and achievements of Dennis Wang, a senior freelance developer from Calgary, Canada. Explore Dennis W's expertise in programming, problem-solving, and technical development through this carefully curated portfolio.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -31,12 +31,12 @@ export default function AboutMe() {
 				</h3>
 				<div className="mx-4 flex flex-col items-center justify-around rounded-xl border-2 border-cyan-400 bg-cyan-100 p-8 dark:border-0 dark:bg-gray-800 sm:mx-10 md:flex-row">
 					<Image
-						src="/greeting_pic.jpg"
+						src="/codeguru.jpg"
 						alt="Dennis Wang (王定)"
 						width={480}
 						height={0}
 						style={{ height: 'auto' }}
-						className="mb-10 w-full max-w-[380px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
+						className="mb-10 w-full max-w-[280px] rounded-full border-4 border-cyan-500 grayscale filter transition duration-300 hover:filter-none dark:border-cyan-700 md:mb-0"
 					/>
 					<p className="flex w-full max-w-2xl items-center text-center text-base md:mb-0 md:ml-10 md:text-lg">
 						{mounted &&

@@ -7,11 +7,11 @@ import TextTransition, { presets } from 'react-text-transition';
 
 export default function LandingPage() {
 	const line1 =
-		'Experienced in the dynamic world of NodeJS, Go, Pandas, and R, I am a Senior Developer ready to bring your projects to life.';
+		'Experienced in the dynamic world of JavaScript, Python, and Go, I am a seasoned developer ready to bring your projects to life.';
 	const line1JP =
-		'NodeJS、Go、Pandas、Rの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。';
+		'JavaScript、Python、GoLangの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。';
 	const line2 =
-		'With a passion for innovation and a knack for problem-solving, I am thriving in the fast-paced world of competition with you.';
+		'With a passion for innovations and a knack for professional solutions, I am thriving in the fast-paced world of competition with you.';
 	const line2JP =
 		'イノベーションへの情熱と問題解決の才能を持ち、競争の激しい世界であなたと一緒に成長していきたいと考えています。';
 
@@ -23,12 +23,21 @@ export default function LandingPage() {
 	}, []);
 
 	const titles = [
-		'Senior NodeJS Engineer',
+		'Seasoned NodeJS Engineer',
+		'Senior Python Guru',
 		'Enthusiastic GoLang Developer',
-		'Professional Pandas Solutionist',
-		'Smart R Developer',
+		'Smart Data Scraper',
+		'Robust Solution Provider',
+		'Fast Learner',
 	];
-	const titlesJP = ['シニアNodeJSエンジニア', '情熱的なGoLang開発者', 'プロPandasエンジニア', 'スマートR開発者'];
+	const titlesJP = [
+		'熟練したNodeJSエンジニア',
+		'シニアPythonグル',
+		'熱心なGoLang開発者',
+		'スマートデータスクレーパー',
+		'堅牢なソリューションプロバイダー',
+		'学びが早い人',
+	];
 	const [titleIndex, setTitleIndex] = useState(0);
 
 	useEffect(() => {
@@ -42,7 +51,7 @@ export default function LandingPage() {
 		<div className="min-h-[100dvh] w-full md:flex md:items-center md:justify-center">
 			<div className="px-10 pt-10 text-center">
 				<h1 className="py-2 text-3xl font-medium text-cyan-700 dark:text-cyan-600 sm:text-4xl md:text-5xl">
-					Dennis W. Guru
+					Dennis Wang
 				</h1>
 
 				{mounted ? (
