@@ -11,7 +11,7 @@ export default function LandingPage() {
 	const line1JP =
 		'JavaScript、Python、GoLangの経験豊富なシニア開発者として、あなたのプロジェクトを実現する準備ができています。';
 	const line2 =
-		'With a passion for innovations and a knack for professional solutions, I am thriving in the fast-paced world of competition with you.';
+		'With a passion for innovations and a knack for professional solutions, I am living in the fast-paced world of competition with you.';
 	const line2JP =
 		'イノベーションへの情熱と問題解決の才能を持ち、競争の激しい世界であなたと一緒に成長していきたいと考えています。';
 
