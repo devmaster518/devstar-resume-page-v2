@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { TbBrandCpp, TbBrandNextjs, TbBrandReact, TbBrandAngular } from 'react-icons/tb';
-import { DiJava, DiMongodb, DiPostgresql, DiPython } from 'react-icons/di';
+import { TbBrandCpp, TbBrandNextjs, TbBrandReact, TbBrandReactNative, TbBrandAngular } from 'react-icons/tb';
+import { DiJava, DiMongodb, DiPostgresql, DiPython, DiIonic } from 'react-icons/di';
 import {
 	SiDjango,
 	SiExpress,
@@ -8,19 +8,20 @@ import {
 	SiMysql,
 	SiSolidity,
 	SiGin,
-	SiPytorch,
 	SiRedis,
 	SiAmazonaws,
 	SiMicrosoftazure,
-	SiTensorflow,
 	SiGraphql,
-	SiSolana,
 	SiDigitalocean,
 	SiPandas,
 	SiNestjs,
 	SiSqlite,
 	SiMicrosoftteams,
 	SiJirasoftware,
+	SiSelenium,
+	SiEthereum,
+	SiMongoose,
+	SiSlack,
 } from 'react-icons/si';
 import { FaHardHat, FaRProject } from 'react-icons/fa';
 import { BsGit } from 'react-icons/bs';
@@ -51,8 +52,8 @@ const languageTools: Tool[] = [
 	},
 	{
 		index: 2,
-		name: 'C++',
-		icon: <TbBrandCpp className="m-4 text-6xl text-blue-500 " />,
+		name: 'GoLang',
+		icon: <BiLogoGoLang className={'m-4 text-6xl text-blue-700'} />,
 	},
 	{
 		index: 3,
@@ -61,8 +62,8 @@ const languageTools: Tool[] = [
 	},
 	{
 		index: 4,
-		name: 'GoLang',
-		icon: <BiLogoGoLang className={'m-4 text-6xl text-blue-700'} />,
+		name: 'C++',
+		icon: <TbBrandCpp className="m-4 text-6xl text-blue-500 " />,
 	},
 	{
 		index: 5,
@@ -84,58 +85,63 @@ const frameworkTools: Tool[] = [
 	},
 	{
 		index: 1,
+		name: 'React Native',
+		icon: <TbBrandReactNative className={'m-4 text-6xl text-cyan-600'} />,
+	},
+	{
+		index: 2,
 		name: 'Next.js',
 		icon: <TbBrandNextjs className={'m-4 text-6xl text-black'} />,
 	},
 	{
-		index: 2,
+		index: 3,
 		name: 'Angular',
 		icon: <TbBrandAngular className={'m-4 text-6xl text-pink-600'} />,
 	},
 	{
-		index: 3,
+		index: 4,
+		name: 'Ionic',
+		icon: <DiIonic className={'m-4 text-6xl text-white'} />,
+	},
+	{
+		index: 5,
 		name: 'Express.js',
 		icon: <SiExpress className={'m-4 text-6xl text-white'} />,
 	},
 	{
-		index: 4,
+		index: 6,
 		name: 'NestJS',
 		icon: <SiNestjs className={'m-4 text-6xl text-red-500'} />,
 	},
 	{
-		index: 5,
+		index: 7,
 		name: 'Django',
 		icon: <SiDjango className={'m-4 text-6xl text-green-800'} />,
 	},
 	{
-		index: 6,
+		index: 8,
 		name: 'Pandas',
 		icon: <SiPandas className={'m-4 text-6xl text-gray-300'} />,
 	},
 	{
-		index: 7,
-		name: 'TensorFlow',
-		icon: <SiTensorflow className={'m-4 text-6xl text-orange-600'} />,
-	},
-	{
-		index: 8,
-		name: 'PyTorch',
-		icon: <SiPytorch className={'m-4 text-6xl text-red-600'} />,
-	},
-	{
 		index: 9,
+		name: 'Selenium',
+		icon: <SiSelenium className={'m-4 text-6xl text-green-600'} />,
+	},
+	{
+		index: 10,
 		name: 'Gin',
 		icon: <SiGin className={'m-4 text-6xl text-orange-500'} />,
 	},
 	{
-		index: 10,
-		name: 'Hardhat',
-		icon: <FaHardHat className={'m-4 text-6xl text-yellow-400'} />,
+		index: 11,
+		name: 'Ethereum',
+		icon: <SiEthereum className={'m-4 text-6xl text-gray-500'} />,
 	},
 	{
-		index: 11,
-		name: 'Solana',
-		icon: <SiSolana className={'m-4 text-6xl text-blue-500'} />,
+		index: 12,
+		name: 'Hardhat',
+		icon: <FaHardHat className={'m-4 text-6xl text-yellow-400'} />,
 	},
 ];
 
@@ -147,26 +153,31 @@ const databaseTools: Tool[] = [
 	},
 	{
 		index: 1,
+		name: 'Mongoose',
+		icon: <SiMongoose className={'m-4 text-6xl text-red-600'} />,
+	},
+	{
+		index: 2,
 		name: 'PostgreSQL',
 		icon: <DiPostgresql className={'m-4 text-6xl text-blue-600'} />,
 	},
 	{
-		index: 2,
+		index: 3,
 		name: 'MySQL',
 		icon: <SiMysql className={'m-4 text-6xl text-orange-600'} />,
 	},
 	{
-		index: 3,
+		index: 4,
 		name: 'Redis',
 		icon: <SiRedis className={'m-4 text-6xl text-red-600'} />,
 	},
 	{
-		index: 4,
+		index: 5,
 		name: 'GraphQL',
 		icon: <SiGraphql className={'m-4 text-6xl text-pink-600'} />,
 	},
 	{
-		index: 5,
+		index: 6,
 		name: 'SQLite',
 		icon: <SiSqlite className={'m-4 text-6xl text-blue-500'} />,
 	},
@@ -210,11 +221,16 @@ const otherTools = [
 	},
 	{
 		index: 7,
+		name: 'Slack',
+		icon: <SiSlack className={'m-4 text-6xl text-gray-300'} />,
+	},
+	{
+		index: 8,
 		name: 'MS Teams',
 		icon: <SiMicrosoftteams className={'m-4 text-6xl text-purple-600'} />,
 	},
 	{
-		index: 8,
+		index: 9,
 		name: 'Atlassian Jira',
 		icon: <SiJirasoftware className={'m-4 text-6xl text-blue-500'} />,
 	},
