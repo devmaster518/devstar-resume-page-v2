@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import { useTheme } from 'next-themes';
 import { Element } from 'react-scroll';
-import { title } from 'process';
 
 interface Diploma {
 	index: number;
@@ -51,7 +50,7 @@ export default function Education() {
 			image_dark: '/project_thumbnails/dark/dlut.jpg',
 			name: 'Dalian University of Technology',
 			nameJP: '大连理工大学',
-			degree: 'B. Science in Math & Computer Science',
+			degree: 'Bachelor Degree, Mathematics and Computer Sciences',
 			degreeJP: '数学・コンピュータサイエンスの理学士',
 			hover_gif_dark: '/project_gifs/dark/dlut.jpg',
 			hover_gif_light: '/project_gifs/light/dlut.jpg',
@@ -92,11 +91,11 @@ export default function Education() {
 					<div className="group m-4 flex justify-between rounded-xl border-2 border-cyan-200 p-5 text-gray-700 hover:border-cyan-500 dark:border-gray-800 dark:text-white dark:hover:border-cyan-700 sm:col-span-2">
 						<Fade left>
 							<div>
-								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2010-2015</p>
+								<p className="mb-2 text-base text-cyan-600 dark:text-cyan-500">2010-2013</p>
 								<p className="my-1 font-medium sm:text-xl">
 									{mounted &&
 										(theme === 'dark'
-											? 'B. Science in Math & Computer Science'
+											? 'Bachelor Degree in Mathematics and Computer Sciences'
 											: '数学・コンピュータサイエンスの理学士')}
 								</p>
 								<p className="my-1 text-sm font-medium">
@@ -131,7 +130,6 @@ export default function Education() {
 								<p className="my-1 text-sm font-medium">
 									{mounted && (theme === 'dark' ? 'Online Coding BootCamp' : 'オンラインコーディングブートキャンプ')}
 								</p>
-								{/* <p className="text-sm">Grade: 89.5% </p> */}
 							</div>
 							<div className="block">
 								<Image
