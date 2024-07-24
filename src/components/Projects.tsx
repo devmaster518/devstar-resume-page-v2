@@ -269,6 +269,19 @@ export default function Projects() {
 			hover_gif_dark: '/project_gifs/dark/wyscout.png',
 			hover_gif_light: '/project_gifs/light/wyscout.png',
 		},
+		{
+			index: 17,
+			image: '/project_thumbnails/light/turvy.png',
+			image_dark: '/project_thumbnails/dark/turvy.png',
+			description: 'React Native - Uber Mobile App',
+			descriptionJP: 'React Native / UberタイプのMobileアプリ',
+			name: 'Turvy LTD - Uber in Australia',
+			tech: 'React Native, LeafMap, Uber, Rider, Driver, GeoLocation, iOS, Android',
+			demo_link: 'https://turvy.net/',
+			github_link: 'https://apps.apple.com/us/app/turvy-driver/id6444149465?platform=iphone',
+			hover_gif_dark: '/project_gifs/dark/turvy.png',
+			hover_gif_light: '/project_gifs/light/turvy.png',
+		},
 	];
 
 	return (
