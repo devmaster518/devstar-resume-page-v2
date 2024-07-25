@@ -49,7 +49,7 @@ function navLinks(theme: any, mounted: boolean) {
 
 			<li className="scroll-link my-1 sm:my-0 sm:mr-4">
 				<Link
-					to="toolbox"
+					to="services"
 					smooth={true}
 					offset={-200}
 					duration={500}
@@ -61,7 +61,7 @@ function navLinks(theme: any, mounted: boolean) {
 					}}
 					className="group transition duration-300 hover:cursor-pointer"
 				>
-					{mounted && (theme === 'dark' ? 'Expertise' : '専門知識')}
+					{mounted && (theme === 'dark' ? 'Services' : 'サービス')}
 					<span className="block h-[1px] max-w-0 bg-gray-700 transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 				</Link>
 			</li>

@@ -7,7 +7,7 @@ import NavBar from '@/components/NavBar';
 import LandingPage from '@/components/LandingPage';
 import AboutMe from '@/components/AboutMe';
 import Education from '@/components/Education';
-import ToolBox from '@/components/ToolBox';
+import Services from '@/components/Services';
 import Projects from '@/components/Projects';
 import ContactMe from '@/components/ContactMe';
 import Footer from '@/components/Footer';
@@ -48,7 +48,7 @@ export default function Home() {
 				<section>
 					<AboutMe />
 					<Education />
-					<ToolBox />
+					<Services />
 					<Projects />
 				</section>
 
