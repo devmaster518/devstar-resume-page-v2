@@ -1,5 +1,7 @@
-import { AiFillGithub, AiFillSkype, AiOutlineWhatsApp } from 'react-icons/ai';
-import { TbBrandTelegram } from 'react-icons/tb';
+import { FcDocument } from "react-icons/fc";
+import { FaGithubSquare, FaTelegram } from "react-icons/fa";
+import { AiFillSkype, AiOutlineWhatsApp } from 'react-icons/ai';
+import { PiMapPinAreaDuotone } from "react-icons/pi";
 import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -157,21 +159,43 @@ export default function LandingPage() {
 				)}
 				<div className="flex justify-center gap-16 py-3 text-5xl text-gray-600">
 					<a
+						href="https://docs.google.com/document/d/1qmlWFQvxh7iSg71ZF5clbCY8D2i576Dm/edit?usp=drive_link&ouid=108510853676302554797&rtpof=true&sd=true"
+						target="_blank"
+						aria-label="Resume"
+						rel="noreferrer"
+						className="group hover:cursor-pointer hover:text-black dark:hover:text-white"
+					>
+						<FcDocument />
+						<p className="invisible text-xs group-hover:visible">Resume</p>
+					</a>
+					<a
 						href="https://github.com/devmaster518"
 						target="_blank"
 						aria-label="GitHub"
 						rel="noreferrer"
 						className="group hover:cursor-pointer hover:text-black dark:hover:text-white"
 					>
-						<AiFillGithub />
+						<FaGithubSquare />
 						<p className="invisible text-xs group-hover:visible">GitHub</p>
 					</a>
+					<a
+						href="https://www.google.com/maps?q=Calgary,+Alberta+T2A+0A1,+CA"
+						target="_blank"
+						aria-label="Location"
+						rel="noreferrer"
+						className="group hover:cursor-pointer hover:text-black dark:hover:text-white"
+					>
+						<PiMapPinAreaDuotone />
+						<p className="invisible text-xs group-hover:visible">Location</p>
+					</a>
+				</div>
+				<div className="flex justify-center gap-16 py-3 text-5xl text-gray-600">
 					<a
 						href="skype:live:.cid.bb94bd4153e9b409?chat"
 						target="_blank"
 						rel="noreferrer"
 						aria-label="Skype"
-						className="group hover:cursor-pointer hover:text-cyan-800 dark:hover:text-cyan-500"
+						className="group hover:cursor-pointer hover:text-cyan-700 dark:hover:text-cyan-500"
 					>
 						<AiFillSkype />
 						<p className="invisible text-xs group-hover:visible">Skype</p>
@@ -181,9 +205,9 @@ export default function LandingPage() {
 						target="_blank"
 						rel="noreferrer"
 						aria-label="Telegram"
-						className="group hover:cursor-pointer hover:text-cyan-800 dark:hover:text-cyan-500"
+						className="group hover:cursor-pointer hover:text-cyan-800 dark:hover:text-cyan-600"
 					>
-						<TbBrandTelegram />
+						<FaTelegram />
 						<p className="invisible text-xs group-hover:visible">Telegram</p>
 					</a>
 					<a

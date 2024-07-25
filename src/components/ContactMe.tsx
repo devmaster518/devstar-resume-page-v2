@@ -15,9 +15,9 @@ const validateEmail = (email: string) => {
 };
 
 export default function ContactMe() {
-	const pdfLink =
+	const resumeLink =
 		'https://docs.google.com/document/d/1qmlWFQvxh7iSg71ZF5clbCY8D2i576Dm/edit?usp=drive_link&ouid=108510853676302554797&rtpof=true&sd=true';
-	const pdfLinkJP = 'https://drive.google.com/file/d/1Ysne0Cjx_DxwYSO7jIMg7jKaen1SmjZi/view?usp=drive_link';
+	const resumeLinkJP = 'https://drive.google.com/file/d/1Ysne0Cjx_DxwYSO7jIMg7jKaen1SmjZi/view?usp=drive_link';
 
 	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
@@ -91,12 +91,12 @@ export default function ContactMe() {
 					<AiOutlineLink className="mr-2" />
 					{mounted &&
 						(theme === 'dark' ? (
-							<Link href={pdfLink} rel="noreferrer" className="group transition duration-300" target="_blank">
+							<Link href={resumeLink} rel="noreferrer" className="group transition duration-300" target="_blank">
 								Resume
 								<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 							</Link>
 						) : (
-							<Link href={pdfLinkJP} rel="noreferrer" className="group transition duration-300" target="_blank">
+							<Link href={resumeLinkJP} rel="noreferrer" className="group transition duration-300" target="_blank">
 								履歴書をダウンロード
 								<span className="block h-0.5 max-w-0 bg-black transition-all duration-500 group-hover:max-w-full dark:bg-white"></span>
 							</Link>
