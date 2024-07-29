@@ -95,7 +95,7 @@ export default function Projects() {
 			descriptionJP: 'Angular・Ionic Framework / Web・Mobileアプリ',
 			name: 'Kindy JP',
 			tech: 'Angular, Ionic Framework, React, Node.js, LoopBack, MongoDB, AWS, GitHub CI/CD, NewRelic',
-			demo_link: 'https://valueap.jp/',
+			demo_link: 'https://apkcombo.com/kindy/kindy.valueap.jp/',
 			github_link: 'https://kindy-app.jp/',
 			hover_gif_dark: '/project_gifs/dark/kindy.jpg',
 			hover_gif_light: '/project_gifs/light/kindy.jpg',
