@@ -48,9 +48,16 @@ import {
 	SiGooglemeet,
 } from 'react-icons/si';
 import { FaHardHat, FaRProject } from 'react-icons/fa';
-import { MdGroups } from "react-icons/md";
+import { MdGroups } from 'react-icons/md';
 import { BsGit, BsGithub } from 'react-icons/bs';
-import { BiLogoGoLang, BiLogoNodejs, BiLogoJavascript, BiLogoTypescript, BiLogoPhp, BiLogoCPlusPlus } from 'react-icons/bi';
+import {
+	BiLogoGoLang,
+	BiLogoNodejs,
+	BiLogoJavascript,
+	BiLogoTypescript,
+	BiLogoPhp,
+	BiLogoCPlusPlus,
+} from 'react-icons/bi';
 import { FcLinux } from 'react-icons/fc';
 import { FaDocker } from 'react-icons/fa';
 import { useTheme } from 'next-themes';
@@ -448,6 +455,7 @@ const columnHeaders = [
 
 export default function Services() {
 	const [svcs, setSvcs] = useState(languageSvcs);
+	const [currSvc, setCurrSvc] = useState(columnHeaders[0].name);
 	const { theme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
@@ -468,9 +476,10 @@ export default function Services() {
 							return (
 								<Fade bottom key={columnHeader.name}>
 									<h4
-										className="mb-2 cursor-pointer whitespace-nowrap rounded px-4 py-2 text-center hover:bg-cyan-500 hover:text-white dark:hover:bg-gray-600"
+										className={`mb-2 cursor-pointer whitespace-nowrap rounded px-4 py-2 text-center hover:bg-cyan-500 hover:text-white dark:hover:bg-gray-600 ${currSvc === columnHeader.name && 'bg-cyan-500 text-white'}`}
 										onClick={() => {
 											setSvcs([...columnHeader.svcs]);
+											setCurrSvc(columnHeader.name);
 										}}
 									>
 										{mounted && (theme === 'dark' ? columnHeader.name : columnHeader.nameJP)}
@@ -479,7 +488,7 @@ export default function Services() {
 							);
 						})}
 					</div>
-					<div className="grid w-full grid-cols-2 rounded-xl bg-cyan-200 p-5 dark:bg-gray-700 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8  xl:grid-cols-10">
+					<div className="grid w-full grid-cols-2 rounded-xl bg-cyan-200 p-5 dark:bg-gray-700 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
 						{svcs.map((svc) => {
 							return (
 								<Fade right key={svc.index} cascade>
