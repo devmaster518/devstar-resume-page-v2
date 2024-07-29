@@ -82,7 +82,7 @@ export default function Projects() {
 			descriptionJP: 'React Native / iOS・Androidアプリ',
 			name: 'MY SCHOOL CONNECT AU',
 			tech: 'React-Native, PHP, WordPress, jQuery, Mobile App Development, Payment Gateway Integration',
-			demo_link: '#',
+			demo_link: 'https://apps.apple.com/au/app/my-school-connect/id1136583371',
 			github_link: 'https://myschoolconnect.com.au/',
 			hover_gif_dark: '/project_gifs/dark/myschoolconnect.png',
 			hover_gif_light: '/project_gifs/light/myschoolconnect.jpg',
