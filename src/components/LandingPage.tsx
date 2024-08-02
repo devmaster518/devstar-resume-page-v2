@@ -1,7 +1,7 @@
-import { FcDocument } from "react-icons/fc";
-import { FaGithubSquare, FaTelegram } from "react-icons/fa";
+import { FcDocument } from 'react-icons/fc';
+import { FaGithubSquare, FaTelegram } from 'react-icons/fa';
 import { AiFillSkype, AiOutlineWhatsApp } from 'react-icons/ai';
-import { PiMapPinAreaDuotone } from "react-icons/pi";
+import { PiMapPinAreaDuotone } from 'react-icons/pi';
 import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -157,7 +157,7 @@ export default function LandingPage() {
 						<br />{' '}
 					</div>
 				)}
-				<div className="flex justify-center gap-16 py-3 text-5xl text-gray-600">
+				<div className="flex justify-center gap-16 py-2 text-4xl text-gray-600">
 					<a
 						href="https://docs.google.com/document/d/1qmlWFQvxh7iSg71ZF5clbCY8D2i576Dm/edit?usp=drive_link&ouid=108510853676302554797&rtpof=true&sd=true"
 						target="_blank"
@@ -189,7 +189,7 @@ export default function LandingPage() {
 						<p className="invisible text-xs group-hover:visible">Location</p>
 					</a>
 				</div>
-				<div className="flex justify-center gap-16 py-3 text-5xl text-gray-600">
+				<div className="flex justify-center gap-16 py-2 text-4xl text-gray-600">
 					<a
 						href="skype:live:.cid.bb94bd4153e9b409?chat"
 						target="_blank"

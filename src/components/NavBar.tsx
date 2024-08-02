@@ -120,9 +120,9 @@ export default function NavBar() {
 			if (navbar) {
 				if (window.scrollY > 100) {
 					navbar.classList.add('py-5');
-					navbar.classList.remove('py-8');
+					navbar.classList.remove('py-7');
 				} else {
-					navbar.classList.add('py-8');
+					navbar.classList.add('py-7');
 					navbar.classList.remove('py-5');
 				}
 			}
@@ -130,9 +130,9 @@ export default function NavBar() {
 			if (horizontalNavbar) {
 				if (window.scrollY > 100) {
 					horizontalNavbar.classList.add('py-5');
-					horizontalNavbar.classList.remove('py-8');
+					horizontalNavbar.classList.remove('py-7');
 				} else {
-					horizontalNavbar.classList.add('py-8');
+					horizontalNavbar.classList.add('py-7');
 					horizontalNavbar.classList.remove('py-5');
 				}
 			}
@@ -146,7 +146,7 @@ export default function NavBar() {
 	return (
 		<>
 			<nav
-				className="sticky top-0 z-10 w-full border-b-2 border-cyan-400 bg-cyan-100 px-8 py-8 text-gray-700 transition-all ease-in-out dark:border-0 dark:bg-gray-800 dark:text-white md:fixed"
+				className="sticky top-0 z-10 w-full border-b-2 border-cyan-400 bg-cyan-100 px-8 py-7 text-gray-700 transition-all ease-in-out dark:border-0 dark:bg-gray-800 dark:text-white md:fixed"
 				id="horizontal-navbar"
 			>
 				<div className="flex w-full items-center justify-between">
